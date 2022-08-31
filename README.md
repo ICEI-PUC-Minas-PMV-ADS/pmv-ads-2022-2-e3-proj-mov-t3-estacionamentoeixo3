@@ -1,23 +1,24 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`CURSO: Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`DISCIPLINA: Projeto - Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
 
-`SEMESTRE`
+`SEMESTRE:2002.2`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto consiste em desenvolver uma aplicação móvel em um ambiente de negócio, voltada para o cliente de empresas de estacionamento. Os clientes poderão buscar por estacionamentos com base na localização informada e valor de pagamento. Assim, com a utilização do aplicativo, a escolha a ser realizada pelo cliente poderá ser feita de forma mais prática e rápida.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Flávia Cristina Gomes de Souza
+* Isabela Pinheiro Santos
+* Júlio Sergio Novaes Gomes
+* Paulo Henrique Costa Santos
+* Raphael Garcez Cordeiro Soares
 
 ## Orientador
 
-* Nome completo do professor 1
+* Prof. Mateus Curcino de Lima
 
 ## Instruções de utilização
 

@@ -4,7 +4,7 @@
 
 `DISCIPLINA: Projeto - Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
 
-`SEMESTRE:2002.2`
+`SEMESTRE: 2002.2`
 
 O projeto consiste em desenvolver uma aplicação móvel em um ambiente de negócio, voltada para o cliente de empresas de estacionamento. Os clientes poderão buscar por estacionamentos com base na localização informada e valor de pagamento. Assim, com a utilização do aplicativo, a escolha a ser realizada pelo cliente poderá ser feita de forma mais prática e rápida.
 

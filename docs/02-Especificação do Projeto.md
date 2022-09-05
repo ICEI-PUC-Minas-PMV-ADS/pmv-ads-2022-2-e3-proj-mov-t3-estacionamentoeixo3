@@ -99,18 +99,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+As restrições listadas na tabela abaixo limitam a execução deste projeto:
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|RE-01| O projeto deverá ser entregue até o final do semestre letivo, não podendo ultrapassar a data de 07/12/2022. |
+|RE-02| O projeto deverá se restringir às tecnologias básicas de um aplicativo móvel. |
+|RE-03| O projeto deverá ser desenvolvido por uma equipe composta por cinco membros. |
 
 ## Diagrama de Casos de Uso
 

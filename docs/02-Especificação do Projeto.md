@@ -16,17 +16,12 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Antônio Alves  | Localizar um estacionamento via aplicativo móvel | Estacionar seu carro em um local que julga ser seguro, com base nos comentários e avaliações de outros usuários |
+|Marcelo Moura       | Localizar um estacionamento via aplicativo móvel, com base no valor de cobrança | Conseguir selecionar os locais mais acessíveis e assim, economizar |
+|Beatriz Beltrão  | Visualizar em um mapa as opções de estacionamentos disponíveis de acordo com a sua localização, assim como seus valores | Estacionar seu veículo com rapidez, mesmo estando em cidades desconhecidas |
+|Luisa Limeira | Ampliar a visibilidade da empresa no mercado de estacionamentos | Aumentar o número de clientes e a receita da empresa |
+|Luisa Limeira | Ter acesso aos feedbacks de clientes que já utilizaram os serviços de sua empresa | Melhorar cada vez mais a gestão do seu negócio |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Modelagem do Processo de Negócio 
 

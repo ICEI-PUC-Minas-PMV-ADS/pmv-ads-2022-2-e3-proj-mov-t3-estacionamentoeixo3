@@ -22,6 +22,18 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Luisa Limeira | Ampliar a visibilidade da empresa no mercado de estacionamentos | Aumentar o número de clientes e a receita da empresa |
 |Luisa Limeira | Ter acesso aos feedbacks de clientes que já utilizaram os serviços de sua empresa | Melhorar cada vez mais a gestão do seu negócio |
 
+## Casos de uso
+
+De acordo com o perfil e as histórias das personas mencionadas no item anterior, foram identificados os seguintes casos de uso:
+ 
+* Realizar cadastro de usuário cliente, fornecendo nome e email (UC-01);
+* Realizar cadastro de empresa de estacionamento, fornecendo nome e email (UC-02);
+* Informar o endereço em que estiver no momento da busca (UC-03);
+* Efetuar busca por estacionamentos próximos ao endereço informado, podendo informar ou não limites de valor de pagamento  (UC-04);
+* Criar um perfil de usuário cliente que permita (UC-05):
+* Avaliar estacionamentos já utilizados;
+* Deixar comentários sobre o serviço utilizado.
+
 
 ## Modelagem do Processo de Negócio 
 

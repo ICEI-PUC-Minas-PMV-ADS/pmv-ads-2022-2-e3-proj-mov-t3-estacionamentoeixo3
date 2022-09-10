@@ -139,21 +139,19 @@ Utilizando o padrão PMBoK todo o projeto será gerenciado utilizando planilhas 
 
 ## Gerenciamento de Tempo
 
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
+O tempo estimado para realização de cada tarefa prevista no cronograma de gestão do projeto seguirá os padrões estabelecidos no método inspirado no diagrama de Gantt, proporcionado melhor visualização e compreensão do período compreendido entre o início e fim de cada tarefa. 
 
-
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
-
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+![prazo](https://user-images.githubusercontent.com/90852295/189491423-0dbace71-db1b-4f26-ba46-7d76ce0e7a60.png)
 
 ## Gerenciamento de Equipe
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+A equipe desempenhará suas tarefas de acordo com as habilidades e características subjetivas de cada membro, a fim de que cada um contribua e produza o melhor trabalho a ser incorporado ao projeto e consequentemente ao produto final. O gerenciamento das tarefas será registrado para que a produtividade e qualidade se mantenham durante todo o desenvolvimento do projeto. 
 
+![equipe](https://user-images.githubusercontent.com/90852295/189491031-cd76458f-2c7a-472a-ad33-8ad307c821fb.png)
 
 
 ## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+Com base em todo o escopo produzido anteriormente, os custos do projeto serão gerenciados em conformidade com os objetivos e requisitos estabelecidos na concepção do projeto, de modo a garantir o desenvolvimento norteado pela realidade financeira pré-definida. 
 
 ![custos](https://user-images.githubusercontent.com/90852295/189489435-bf935897-8bfc-46ce-9c3e-31ee5fc05c21.png)

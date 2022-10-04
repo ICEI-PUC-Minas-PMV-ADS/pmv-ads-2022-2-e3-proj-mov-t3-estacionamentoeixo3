@@ -54,15 +54,13 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+As características básicas de uma aplicação móvel são: portabilidade, usabilidade, funcionalidade e conectividade. Tais características dão significado ao que é ser móvel, pois mobilidade pode ser definida como capacidade de se mover ou ser movido facilmente. Assim, a aplicação móvel deve ser desenvolvida para ser utilizada em dispositivos móveis portáteis. 
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+Um dispositivo móvel portátil deve ser capaz de se conectar, obter e fornecer dados para outros usuários, aplicativos e sistemas, ou seja, deve ser interativo. Por meio deste dispositivo, poderá ser possível ao produto de software que foi projetado para funcionar em um dispositivo móvel atender às necessidades de seus usuários. Pode-se dizer que um software que satisfaz às expectativas dos seus stakeholders é um software de qualidade.
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+Após serem consideradas as características básicas de uma aplicação móvel,  foram identificadas algumas sub-características dentre as oito características de qualidade para produtos de software definidas na norma internacional ISO/IEC 25010, que serão utilizadas como base para nortear o desenvolvimento da aplicação móvel. 
 
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+As características estão especificadas abaixo em negrito, e as subcaracterísticas estão organizadas em tópicos. Além disso, para cada subcaracterística, será definida uma métrica subjetiva para medir a qualidade do software. As métricas serão avaliadas pelos usuários, exceto segurança, manutenibilidade e portabilidade (avaliada pelos desenvolvedores). A cada somatório das subcaracterísticas, será obtido o resultado da qualidade das características. Algumas características possuirão valor com peso 2, ou seja, o total avaliado terá o seu valor multiplicado por dois. Isso se dará devido à relevância da característica para a aplicação como um todo. Por fim, o somatório das oito características definirá o quanto o software terá de qualidade.
+ 
+Veja abaixo: 
+

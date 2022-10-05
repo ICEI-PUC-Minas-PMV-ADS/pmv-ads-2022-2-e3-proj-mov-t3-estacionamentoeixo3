@@ -39,23 +39,35 @@ De acordo com o perfil e as histórias das personas mencionadas no item anterior
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+A proposta deste projeto se fundamenta na necessidade de apresentar ao usuário de estacionamentos a possibilidade de efetuar busca e reserva de vagas, utilizando para tal, a ferramenta de geolocalização disponibilizada no dispositivo móvel, que direcionará o usuário para os estabelecimentos com vagas disponíveis, permitindo inclusive que o usuário realize a busca de acordo com os valores pretendidos para utilização do serviço.
+Para isso, serão implementadas funcionalidades de cadastro do usuário, login, busca de vagas, além de permitir acesso ao histórico de utilização, avaliação e envio de comentários ao estabelecimento. 
+
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+O objetivo é demonstrar como se dará o processo de negócio, tendo em vista que o ator principal de todo processo aqui apresentado é o usuário do estacionamento, embora o contexto exija a menção indireta do gestor do estacionamento que será o ambiente utilizado para prestação do serviço. Além disso, o pagamento da contratação de reserva da vaga pretendida é mencionado com a finalidade de esclarecer que, embora seja uma condição para utilização dos serviços, esta funcionalidade inicialmente não será implementada no projeto, podendo figurar como melhoria a ser implementada futuramente.  
+Contudo a implementação dos requisitos essenciais pretendidos será suficiente para ofertar a totalidade das funcionalidades descritas na documentação do projeto. 
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – Cadastro de usuário e busca por vaga
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+De acordo com o padrão BPNM, o processo de cadastro e busca de vaga em estacionamento foi desenhado de modo a demonstrar, suscintamente, a maneira como se dará o fluxo do processo a partir da requisição de cadastro do usuário no sistema até o momento em que o usuário encontra a vaga e opta por encerrar a pesquisa ou ser direcionado para login. Vale ressaltar que os estacionamentos que serão alvo das buscas do usuário, não serão geridos por este projeto. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+![1](https://user-images.githubusercontent.com/90852295/193950863-de41afb0-16aa-40b8-ba44-4e009bff4b40.png)
 
-### Processo 2 – NOME DO PROCESSO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+### Processo 2 – Usuário logado e utilização do serviço
 
-![Processo 2](img/02-bpmn-proc2.png)
+A partir do login, o usuário procederá com a reserva da vaga, condicionada ao pagamento prévio, que não será implementado neste sistema, apenas será demonstrado para melhor compreensão do fluxo, e a partir daí fazer uso da vaga pretendida. 
+
+![2](https://user-images.githubusercontent.com/90852295/193950269-76d44aa1-60ff-4b95-a2ea-508f5d0b27e8.png)
+
+
+### Processo 3 – Encerramento da utilização do serviço
+
+Ao final, com o encerramento da estadia, o usuário pode optar por visualizar opções do menu do sistema, ou efetuar checkout encerrando a utilização do serviço contratado. 
+
+![3](https://user-images.githubusercontent.com/90852295/193951693-a619019a-6a53-45b6-940d-0082d91ba2c7.png)
+
 
 ## Indicadores de Desempenho
 

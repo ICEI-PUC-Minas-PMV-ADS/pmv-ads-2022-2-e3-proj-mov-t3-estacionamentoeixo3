@@ -8,6 +8,8 @@ const HomeScreen = (props) => {
       <Text theme={{ fonts: { medium: "Open Sans" } }}>Home Screen</Text>
       <Button
         icon="camera"
+        mode="outlined"
+        dark
         theme={{ roundness: 3 }}
         onPress={() => alert("Hello")}
       >

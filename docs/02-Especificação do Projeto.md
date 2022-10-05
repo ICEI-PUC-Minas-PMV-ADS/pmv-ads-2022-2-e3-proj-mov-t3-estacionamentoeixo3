@@ -71,12 +71,15 @@ Ao final, com o encerramento da estadia, o usuário pode optar por visualizar op
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+| # | Indicador | Objetivo | Descrição | Cálculo | Fonte de dados | Perspectiva | Meta |
+|---|----------------|----------------|----------------|-----------------|----------------|-------------|----------------|
+| 1 | Taxa de downloads do aplicativo | Verificar a quantidade de downloads do aplicativo | Obter a quantidade de pessoas que baixaram e utilizaram o aplicativo | Número de downloads efetuados/período | Playstore e Apple Store | Difusão do produto | 100 downloads por período |
+| 2 | Índice de avaliação na Play Store e Apple Store | Verificar o nível de aceitação do aplicativo | Obter a média das notas dadas pelos usuários que baixaram e utilizaram o aplicativo | Número de estrelas marcadas/período | Playstore e Apple Store | Qualidade do produto | Avaliação acima de 4 estrelas |
+| 3 | Quantidade de cadastros na aplicação | Verificar o número de clientes cadastrados | Avaliar a quantidade de cadastros de cliente | Número de cadastro de clientes/período | Banco de dados do aplicativo | Crescimento do produto | 100 clientes por período |
+| 4 | Quantidade de avaliações sobre um estacionamento | Estimar o número de clientes que utilizam a aplicação e que também fazem avaliação do estacionamento | Verificar o número de clientes que avaliam um estacionamento após a sua utilização | Número de vezes que o cliente usou o aplicativo para estacionamento + número de avaliações realizadas /período | Banco de dados do aplicativo | Efetividade ao que se propõe | Pelo menos 70% dos clientes que utilizam a aplicação para estacionamento enviem sua avaliação do estabelecimento utilizado |
+| 5 | Quantidade de comentários sobre um estacionamento | Estimar o número de clientes que utilizam a aplicação e que também fazem comentários sobre o estacionamento | Verificar o número de comentários sobre um estacionamento após a sua utilização | Número de vezes que o cliente usou o aplicativo para estacionamento + número de comentários realizados /período | Banco de dados do aplicativo | Efetividade ao que se propõe | Pelo menos 50% dos clientes que utilizam a aplicação para estacionamento enviem seus comentários sobre o estabelecimento utilizado |
+| 6 | Tempo de resposta na busca pelo estacionamento | Verificar a quantidade de tempo gasto pelo aplicativo leva para retornar um resultado | Avaliar o tempo de resposta da aplicação | Cálculo do tempo de resposta após clicar no botão de busca | Banco de dados da aplicação | Efetividade ao que se propõe | 5 segundos para devolução de resposta |
 
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
 
 ## Requisitos
 

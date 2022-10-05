@@ -13,7 +13,7 @@ const Main = () => {
   return (
     <Stack.Navigator>
       {routes.map((item, index) => (
-        <Stack.Screen key={index} name={item.name} component={item.component} />
+        <Stack.Screen key={index} name={item.name}   component={item.component} />
       ))}
     </Stack.Navigator>
   );

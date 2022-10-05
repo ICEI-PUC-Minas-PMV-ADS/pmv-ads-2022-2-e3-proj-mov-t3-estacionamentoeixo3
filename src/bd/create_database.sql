@@ -1,1 +1,1 @@
-create database payment_system;
+create database why_park;

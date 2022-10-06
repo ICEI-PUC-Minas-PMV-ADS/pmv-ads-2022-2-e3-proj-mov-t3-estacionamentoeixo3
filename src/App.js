@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import 'react-native-gesture-handler';
 import Main from "./navigations/main.js";
 import {
   NavigationContainer,
@@ -12,33 +12,33 @@ import {
   Provider as PaperProvider,
 } from "react-native-paper";
 import merge from "deepmerge";
-import { PreferencesContext } from "./contexts/index";
+import { PreferencesContext } from "./contexts";
 
 const CombinedDefaultTheme = merge(PaperDefaultTheme, NavigationDefaultTheme);
 const CombinedDarkTheme = merge(PaperDarkTheme, NavigationDarkTheme);
 
 function App() {
-  const [isThemeDark, setIsThemeDark] = React.useState(true);
+  const [isThemeDark, setIsTheme] = React.useState(true);
 
   let theme = isThemeDark ? CombinedDarkTheme : CombinedDefaultTheme;
 
-  const toggleTheme = React.useCallback(() => {
-    return setIsThemeDark(!isThemeDark);
+  const setIsThemeDark = React.useCallback(() => {
+    return setIsTheme(!isThemeDark);
   }, [isThemeDark]);
 
-  const preferences = React.useMemo(
+  const values = React.useMemo(
     () => ({
-      toggleTheme,
       isThemeDark,
+      setIsThemeDark,
     }),
-    [toggleTheme, isThemeDark]
+    [isThemeDark, setIsThemeDark]
   );
 
   return (
-    <PreferencesContext.Provider value={preferences}>
-      <PaperProvider theme={CombinedDarkTheme}>
+    <PreferencesContext.Provider value={values}>
+      <PaperProvider theme={theme}>
         <NavigationContainer
-          theme={CombinedDarkTheme}
+          theme={theme}
           children={<Main />}
         ></NavigationContainer>
       </PaperProvider>

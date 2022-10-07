@@ -27,13 +27,14 @@ Além dos arquivos localizados em src/bd, o modelo físico está assim represent
 ## Tecnologias Utilizadas
 
 A aplicação foi desenvolvida nas linguagens Java Script com React Native. O CSS é a linguagem responsável por dar estilo ao projeto. Por sua vez, SQL para o banco de dados remoto e SQlite para o banco de dados do dispositivo.
-O ambiente de desenvolvimento foi configurado utilizando como IDE o VS Code com auxílio do Expo para uniformização dos códigos. O Android Studio foi utilizado para emular os dispositivos Android. Quanto ao back-end, foi utilizado também o jSON server para criação de APIs.
+O ambiente de desenvolvimento foi configurado utilizando como IDE o VS Code com auxílio do Expo para uniformização dos códigos. O Android Studio foi utilizado para emular os dispositivos Android. 
+Quanto ao back-end, foi desenvolvido em node.js com o pacote npm express para rodar o servidor. Está hospedado no heroku: https://whypark.herokuapp.com/.
 Por fim, utilizamos o GIT como sistema de versionamento de código e o GitHub como plataforma para hospedagem do código fonte da aplicação.
 
 ## Hospedagem
 
 A princípio a aplicação rodará em ambiente local com possibilidade de ser hospedada posteriormente na playStore, caso os custos se mostrem viáveis.
-O back-end não foi necessariamente criado em servidor próprio, mas sim aproveitando o artifício do jSON server para simulá-lo.
+O back-end foi criado separadamente e hospedado no Heroku: Cloud Application Platform. Encontra-se online até o presente momento. Como a interface foi hospedada em um plano gratuito, a depender da quantidade de requisições poderá sofrer instabilidade.
 
 ## Qualidade de Software
 

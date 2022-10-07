@@ -6,15 +6,6 @@ const HomeScreen = (props) => {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text theme={{ fonts: { medium: "Open Sans" } }}>Home Screen</Text>
-      <Button
-        icon="camera"
-        mode="outlined"
-        dark
-        theme={{ roundness: 3 }}
-        onPress={() => alert("Hello")}
-      >
-        Press
-      </Button>
     </View>
   );
 };

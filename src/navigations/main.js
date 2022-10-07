@@ -1,9 +1,10 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { LoginScreen, HomeScreen } from "../pages";
+import { LoginScreen, HomeScreen, SingScreen } from "../pages";
 import Header from "../components/header";
 const routes = [
   { name: "Login", component: LoginScreen },
+  { name: "Singup", component: SingScreen },
   { name: "Home", component: HomeScreen },
 ];
 
@@ -19,7 +20,7 @@ const Main = () => {
       }}
     >
       {routes.map((item, index) => (
-        <Stack.Screen  key={index} name={item.name} component={item.component} />
+        <Stack.Screen key={index} name={item.name} component={item.component} />
       ))}
     </Stack.Navigator>
   );

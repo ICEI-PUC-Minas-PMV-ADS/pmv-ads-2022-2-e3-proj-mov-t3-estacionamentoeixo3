@@ -3,7 +3,6 @@ export default StyleSheet.create({
   container: {
     width: "100%",
     paddingTop: 15,
-    paddingBottom: 20,
     paddingLeft: 10,
     paddingRight: 10,
     display: "flex",
@@ -19,7 +18,7 @@ export default StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 40,
+    marginBottom: 20,
     text: {
       fontWeight: "400",
       textAlign: "center",
@@ -28,23 +27,31 @@ export default StyleSheet.create({
       fontSize: 50,
     },
   },
-
-  title_login: {
-    textAlign: "center",
-    color: "#fff",
-    fontWeight: "600",
-    fontSize: 40,
+  banner: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
+  text: {
+    fontSize: 25,
+    fontWeight: "800",
+    textAlign: "left",
+    color: "#5E5CE5",
+  },
+  text_subtitle: {
+    fontSize: 18,
+    fontWeight: "700",
+    textAlign: "center",
+    color: "#5E5CE5",
+  },
+
   form: {
     width: 340,
   },
   input: {
-    marginTop: 20,
+    marginTop: 8,
     backgroundColor: "#FFF",
-    color:'#000'
-  },
-  icon_eye: {
-    color: "#5E5CE5",
   },
   button: {
     width: "100%",
@@ -57,8 +64,8 @@ export default StyleSheet.create({
       textAlign: "center",
       justifyContent: "center",
       fontSize: 25,
-      color: "#fff",
       fontWeight: "bold",
+      color:'#fff'
     },
   },
   link_ou: {
@@ -69,6 +76,7 @@ export default StyleSheet.create({
   link_create: {
     color: "#eee",
     marginTop: 3,
+    marginBottom: 13,
     fontSize: 17,
   },
 });

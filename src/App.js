@@ -1,5 +1,5 @@
 import * as React from "react";
-import 'react-native-gesture-handler';
+import "react-native-gesture-handler";
 import Main from "./navigations/main.js";
 import {
   NavigationContainer,
@@ -20,7 +20,31 @@ const CombinedDarkTheme = merge(PaperDarkTheme, NavigationDarkTheme);
 function App() {
   const [isThemeDark, setIsTheme] = React.useState(true);
 
-  let theme = isThemeDark ? CombinedDarkTheme : CombinedDefaultTheme;
+  let theme = isThemeDark
+    ? {
+        ...CombinedDarkTheme,
+        colors: {
+          primary: "#5E5CE5",
+          notification: "#908FDC",
+          background: "#fff",
+          suferace: "#262626",
+          accent: "#F27D16",
+          disabled: "#959595",
+          text: "#262626",
+        },
+      }
+    : {
+        ...CombinedDefaultTheme,
+        colors: {
+          primary: "#5E5CE5",
+          notification: "#908FDC",
+          background: "#0D0D0D",
+          suferace: "#262626",
+          accent: "#F27D16",
+          disabled: "#959595",
+          text: "#fff",
+        },
+      };
 
   const setIsThemeDark = React.useCallback(() => {
     return setIsTheme(!isThemeDark);

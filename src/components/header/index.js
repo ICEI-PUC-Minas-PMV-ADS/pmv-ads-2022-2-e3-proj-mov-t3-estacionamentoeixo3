@@ -6,6 +6,8 @@ import {
   TouchableRipple,
   Switch,
   Button,
+  Avatar,
+  TextInput,
 } from "react-native-paper";
 import { PreferencesContext } from "../../contexts";
 
@@ -24,14 +26,24 @@ const Header = ({ route, navigation }) => {
         dark: true,
         mode: "",
         colors: {
-          primary: theme.colors.primary,
+          primary: theme.colors.background,
         },
       }}
     >
-      {route.name !== "Login" ? <Appbar.Content title={route.name} /> : ""}
-      <View>
+      <View
+        style={[
+          {
+            display: "flex",
+            width: 200,
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          },
+        ]}
+      >
+        <Avatar.Icon icon="power" size={42} />
         <Switch
-          style={[{ backgroundColor: theme.colors.primary }]}
+          style={[{ backgroundColor: theme.colors.background }]}
           color={"#000"}
           value={isThemeDark}
           onChange={handlerStateSwitch}

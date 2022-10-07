@@ -33,12 +33,9 @@ O diagrama foi pensado de forma a atender a todas as histórias de usuários abo
 
 ## Wireframes
 
+A elaboração da interface do sistema prioriza a simplicidade e é focado em agilidade e usabilidade. As telas são projetadas para funcionamento em dispositivos móveis. Abaixo estão os protótipos das telas do sistema, que têm o objetivo de mostrar a disposição dos elementos da aplicação real.
+
 ![Exemplo de Wireframe Login](img/wireframe.png)
 
 
-São protótipos usados em design de interface para sugerir a estrutura de uma aplicacao móvel e seu relacionamentos entre suas páginas. Um wireframe de uma aplicação móvel é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes]
-> - [Figma](https://www.figma.com/file/EYk9wqeDDdjnNDK2gWYLSL/Mobile-WhyPark?node-id=0%3A1)
 

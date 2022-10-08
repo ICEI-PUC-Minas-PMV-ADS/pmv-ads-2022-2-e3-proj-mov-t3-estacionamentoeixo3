@@ -14,7 +14,6 @@ O projeto consiste em desenvolver uma aplicação móvel em um ambiente de negó
 * Isabela Pinheiro Santos
 * Júlio Sergio Novaes Gomes
 * Paulo Henrique Costa Santos
-* Raphael Garcez Cordeiro Soares
 
 ## Orientador
 

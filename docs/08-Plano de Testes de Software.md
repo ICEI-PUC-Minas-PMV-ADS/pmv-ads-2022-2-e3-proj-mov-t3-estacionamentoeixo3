@@ -51,7 +51,7 @@ Com base no perfil das personas descritas na documentação do projeto serão se
 
 ## Tarefas a serem executadas pelos participantes, de acordo com os casos de uso elencados no projeto:
 
-![1](https://user-images.githubusercontent.com/90852295/194366351-1eaad428-d5e8-452c-abc2-34abcc1f4339.png)
+![c01](https://user-images.githubusercontent.com/90852295/194710175-7051c71d-749b-42a6-8a25-6bbae5fcf19b.png)
 ![2](https://user-images.githubusercontent.com/90852295/194366377-5546b618-de83-4c0e-a26f-9e4e9ec9c048.png)
 ![3](https://user-images.githubusercontent.com/90852295/194366901-184333d1-bb98-4cdd-8764-e15e6b98fa49.png)
 ![4](https://user-images.githubusercontent.com/90852295/194366939-367f213a-9af5-4077-a055-b2ead9ed787b.png)

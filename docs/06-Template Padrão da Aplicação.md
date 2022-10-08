@@ -1,6 +1,6 @@
 # Template Padrão da Aplicação
 
-O template padrão a ser utilizado corresponde ao modelo de wireframe interativo propostos, disponível no tópico "Projeto de Interface". Será adotado um layout padrão da aplicação, que será utilizado em todas as páginas do aplicativo móvel.
+O template padrão a ser utilizado corresponde ao modelo de wireframe interativo proposto, disponível no tópico "Projeto de Interface". Será adotado um layout padrão, que será utilizado em todas as telas do aplicativo móvel.
 
 ![TelasIniciais](https://user-images.githubusercontent.com/88891675/194719874-980f0650-b56e-489e-a7ed-c80f75ac22b0.jpg)
 ![TelaCliente](https://user-images.githubusercontent.com/88891675/194719880-2c42ce2b-369e-4f65-b62f-271e586ad419.jpg)
@@ -16,7 +16,7 @@ A tela de login será a primeira a ser apresentada ao usuário. Possui campos a 
 
 ![Cadastro](https://user-images.githubusercontent.com/88891675/194720281-96f723d7-c300-4836-9edf-c6e2f7d3f4bb.jpg)
 
-Para fazer o cadastro, basta o cliente informar os seus dados e selecionar o botão abaixo dos campos. Todos os camposdo formulário deverão ser preenchidos. Também possui um link clicável "Acessar", que irá redirecionar o usuário de volta à tela de Login, caso já tenha uma conta cadastrada com os dados informados.  
+Para fazer o cadastro, basta o cliente informar os seus dados e selecionar o botão abaixo dos campos. Todos os campos do formulário deverão ser preenchidos. Também possui um link clicável "Acessar", que irá redirecionar o usuário de volta à tela de Login, caso já tenha uma conta cadastrada com os dados informados.  
 
 ## Tela home
 

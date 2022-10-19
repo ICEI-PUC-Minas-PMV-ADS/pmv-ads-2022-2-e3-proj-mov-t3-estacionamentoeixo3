@@ -1,49 +1,69 @@
-import React, { useContext, useState } from "react";
-import { SafeAreaView, ImageBase, View, ScrollView, Image } from "react-native";
+import React, { useState } from "react";
+import { View, ScrollView, Image } from "react-native";
 import { Link } from "@react-navigation/native";
-import { Avatar, Button, Text, TextInput, useTheme } from "react-native-paper";
+import { Button, Text, TextInput, useTheme } from "react-native-paper";
 import style from "./style";
-import logo1 from "../../assets/logo_1.png";
-import logo2 from "../../assets/logo_2.png";
-import { PreferencesContext } from "../../contexts";
+import { logo1, logo2 } from "../../assets";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTheme } from "../../flux/slices/theme";
+import { loginRequest } from "../../services/singup-service";
+import { selectUser, setIsAuhtenticate, setUser } from "../../flux/slices/user";
+import { selectMessage, setMessage } from "../../flux/slices/message";
 import api from "../../axios/api";
 
 const LoginScreen = ({ navigation }) => {
-  const theme = useTheme();
+  const themeStyle = useTheme();
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [viewPassword, setStatePassword] = useState(true);
+
+  const dispatch = useDispatch();
+  const { theme } = useSelector(selectTheme);
+  const { user } = useSelector(selectUser);
+
   const themes = {
-    color: theme.colors.text,
-    border: theme.colors.primary,
-    text: theme.colors.text,
+    color: themeStyle.colors.text,
+    border: themeStyle.colors.primary,
+    text: themeStyle.colors.text,
   };
-  const { isThemeDark } = useContext(PreferencesContext);
 
   const onSubmit = async () => {
     if (!email && !password) {
+      resolve({ msg: "Verifique as credenciais", status: 205 });
       return;
     }
+    //Salva o user que fez login
+    dispatch(setUser({ ...user, email }));
+
     try {
       const response = await api.post("/userLogin", {
         email: email,
         senha: password,
       });
-      let { status, data } = response;
+
+      let { status } = response;
       if (status === 200) {
+        dispatch(setIsAuhtenticate(true));
         navigation.navigate("Home");
       }
     } catch (err) {
-      console.log(err.response.data);
-      console.log(err.response.status);
+      dispatch(setIsAuhtenticate(false));
+      dispatch(
+        setMessage({
+          text: err.response.data,
+          state: true,
+          type: "ERROR",
+          status: err.response.status,
+        })
+      );
     }
   };
 
   return (
-    <ScrollView>
+    <ScrollView style={[{ paddingHorizontal: 12 }]}>
       <View style={style.container}>
         <View style={style.logo}>
-          <Image source={isThemeDark ? logo2 : logo1} />
+          <Image source={theme ? logo2 : logo1} />
         </View>
         <View style={style.form}>
           <TextInput
@@ -93,11 +113,10 @@ const LoginScreen = ({ navigation }) => {
           </Button>
         </View>
 
-        <Text style={[{ ...style.link_ou, ...themes }]}>Ou</Text>
         <Text style={[{ ...style.link_create, ...themes }]}>
           <Text> Não tem uma conta? </Text>
           <Link to={"/Singup"}>
-            <Text style={{ color: theme.colors.primary, marginLeft: 23 }}>
+            <Text style={{ color: themeStyle.colors.primary, marginLeft: 23 }}>
               Cadastre
             </Text>
           </Link>

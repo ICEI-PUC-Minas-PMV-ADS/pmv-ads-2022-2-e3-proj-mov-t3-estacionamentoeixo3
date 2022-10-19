@@ -1,23 +1,14 @@
 import React from "react";
 import { View } from "react-native";
-import {
-  useTheme,
-  Appbar,
-  TouchableRipple,
-  Switch,
-  Button,
-  Avatar,
-  TextInput,
-} from "react-native-paper";
-import { PreferencesContext } from "../../contexts";
-
+import { useSelector, useDispatch } from "react-redux";
+import { useTheme, Appbar, Switch, Avatar } from "react-native-paper";
+import { selectTheme, setTheme } from "../../flux/slices/theme";
+import Icon from "react-native-vector-icons/Feather";
 const Header = ({ route, navigation }) => {
-  const theme = useTheme();
-  const { isThemeDark, setIsThemeDark } = React.useContext(PreferencesContext);
-
-  const handlerStateSwitch = () => {
-    setIsThemeDark(!isThemeDark);
-  };
+  const themeSTyle = useTheme();
+  const dispatch = useDispatch();
+  const { theme } = useSelector(selectTheme);
+  const handlerStateSwitch = () => dispatch(setTheme(!theme));
 
   return (
     <Appbar.Header
@@ -26,7 +17,7 @@ const Header = ({ route, navigation }) => {
         dark: true,
         mode: "",
         colors: {
-          primary: theme.colors.background,
+          primary: themeSTyle.colors.background,
         },
       }}
     >
@@ -34,18 +25,25 @@ const Header = ({ route, navigation }) => {
         style={[
           {
             display: "flex",
-            width: 200,
+            width: "100%",
             flexDirection: "row",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "flex-end",
+            paddingEnd: 10,
           },
         ]}
       >
-        <Avatar.Icon icon="power" size={42} />
+        <Icon
+          name={theme ? "moon" : "sun"}
+          size={32}
+          color={theme ?"#5E5CE5":"hsl(48, 100%, 70%)"}
+          brand={true}
+        />
         <Switch
-          style={[{ backgroundColor: theme.colors.background }]}
-          color={"#000"}
-          value={isThemeDark}
+          style={[{ backgroundColor: themeSTyle.colors.background }]}
+          color={theme ? "#fff" : "#000"}
+          value={theme}
+          thumbColor={theme ? "#000" : "#fff"}
           onChange={handlerStateSwitch}
         />
       </View>

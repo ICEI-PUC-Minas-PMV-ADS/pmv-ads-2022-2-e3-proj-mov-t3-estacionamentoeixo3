@@ -13,28 +13,36 @@ import {
 import style from "./style";
 import logo1 from "../../assets/logo_up1.png";
 import logo2 from "../../assets/logo_up2.png";
-import { PreferencesContext } from "../../contexts";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTheme } from "../../flux/slices/theme";
+import { selectUser, setIsAuhtenticate, setUser } from "../../flux/slices/user";
+import message, { setMessage } from "../../flux/slices/message";
 
 const SingupScreen = ({ navigation }) => {
-  const theme = useTheme();
+  const themeStyle = useTheme();
   const [email, setEmail] = useState(null);
   const [name, setName] = useState(null);
   const [password, setPassword] = useState(null);
   const [passwordRepeat, setPasswordRepeat] = useState(null);
+
+  const { theme } = useSelector(selectTheme);
+  const { user } = useSelector(selectUser);
+  const dispatch = useDispatch();
+
   const themes = {
-    color: theme.colors.text,
-    border: theme.colors.primary,
-    text: theme.colors.text,
+    color: themeStyle.colors.text,
+    border: themeStyle.colors.primary,
+    text: themeStyle.colors.text,
   };
-  const { isThemeDark } = useContext(PreferencesContext);
 
   const onSubmit = async (e) => {
-    console.log(email);
     if (!email && !name && !password && !passwordRepeat) {
       return;
     }
+    //Atualiza o state com info dos user
+    dispatch(setUser({ ...user, email, nome: name }));
+    //Verifica se as senhas são iguais
     if (password.includes(passwordRepeat)) {
-      alert("passou");
       api
         .post("/users", {
           email: email,
@@ -44,13 +52,26 @@ const SingupScreen = ({ navigation }) => {
         .then((response) => {
           let { status, data } = response;
           if (status === 200) {
+            dispatch(setIsAuhtenticate(true));
             navigation.navigate("Login");
           }
         })
         .catch((err) => {
-          console.log(err.response.status);
-          console.log(err.response.data);
+          const { data, status } = err.response;
+          dispatch(
+            setMessage({ state: true, text: data, status, type: "ERROR" })
+          );
         });
+    } else {
+      dispatch(
+        setMessage({
+          state: true,
+          text: "As senhas não são iguais!",
+          status: 404,
+          type: "ERROR",
+        })
+      );
+      return;
     }
   };
 
@@ -58,7 +79,7 @@ const SingupScreen = ({ navigation }) => {
     <ScrollView>
       <View style={style.container}>
         <View style={style.logo}>
-          <Image source={isThemeDark ? logo2 : logo1} />
+          <Image source={theme ? logo2 : logo1} />
         </View>
         <View style={style.banner}>
           <Text style={style.text}>Faça seu cadastro</Text>
@@ -139,11 +160,10 @@ const SingupScreen = ({ navigation }) => {
           </Button>
         </View>
 
-        <Text style={[{ ...style.link_ou, ...themes }]}>Ou</Text>
         <Text style={[{ ...style.link_create, ...themes }]}>
           <Text> Ja tem uma conta? </Text>
           <Link to={"/Login"}>
-            <Text style={{ color: theme.colors.primary, marginLeft: 23 }}>
+            <Text style={{ color: themeStyle.colors.primary, marginLeft: 23 }}>
               Acessar
             </Text>
           </Link>

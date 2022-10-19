@@ -18,7 +18,7 @@ export default StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 20,
+    marginTop:29,
     text: {
       fontWeight: "400",
       textAlign: "center",
@@ -32,6 +32,7 @@ export default StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 30,
   },
   text: {
     fontSize: 25,
@@ -47,16 +48,18 @@ export default StyleSheet.create({
   },
 
   form: {
+    marginTop: 50,
     width: 340,
   },
   input: {
-    marginTop: 8,
+    height: 48,
+    marginTop: 5,
     backgroundColor: "#FFF",
   },
   button: {
     width: "100%",
     height: 60,
-    marginTop: 35,
+    marginTop: 20,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -65,7 +68,7 @@ export default StyleSheet.create({
       justifyContent: "center",
       fontSize: 25,
       fontWeight: "bold",
-      color:'#fff'
+      color: "#fff",
     },
   },
   link_ou: {
@@ -75,7 +78,7 @@ export default StyleSheet.create({
   },
   link_create: {
     color: "#eee",
-    marginTop: 3,
+    marginTop: 72,
     marginBottom: 13,
     fontSize: 17,
   },

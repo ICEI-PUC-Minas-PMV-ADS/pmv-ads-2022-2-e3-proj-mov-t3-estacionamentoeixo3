@@ -39,7 +39,8 @@ export default StyleSheet.create({
     width: 340,
   },
   input: {
-    marginTop: 20,
+    height:48,
+    marginTop: 13,
     backgroundColor: "#FFF",
     color:'#000'
   },
@@ -68,7 +69,7 @@ export default StyleSheet.create({
   },
   link_create: {
     color: "#eee",
-    marginTop: 3,
+    marginTop: 83,
     fontSize: 17,
   },
 });

@@ -9,7 +9,7 @@ import LayoutProvider from "./components/layout/index.js";
 function App() {
   return (
     <Provider store={store}>
-      <LayoutProvider />
+      <LayoutProvider  />
       <LogComponent />
     </Provider>
   );

@@ -17,7 +17,10 @@ const Main = () => {
             screenOptions={{
                 header: ({route, navigation}) => (
                     <Header route={route} navigation={navigation}/>
+
                 ),
+
+
             }}
         >
             {routes.map((item, index) => (

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { SafeAreaView, ImageBase, View, ScrollView, Image } from "react-native";
 import { Link, R } from "@react-navigation/native";
-import api from "../../axios/api";
+import api from "../../../axios/api";
 import {
   Avatar,
   Button,
@@ -11,12 +11,12 @@ import {
   useTheme,
 } from "react-native-paper";
 import style from "./style";
-import logo1 from "../../assets/logo_up1.png";
-import logo2 from "../../assets/logo_up2.png";
+import logo1 from "../../../assets/logo_up1.png";
+import logo2 from "../../../assets/logo_up2.png";
 import { useDispatch, useSelector } from "react-redux";
-import { selectTheme } from "../../flux/slices/theme";
-import { selectUser, setIsAuhtenticate, setUser } from "../../flux/slices/user";
-import message, { setMessage } from "../../flux/slices/message";
+import { selectTheme } from "../../../flux/slices/theme";
+import { selectUser, setIsAuhtenticate, setUser } from "../../../flux/slices/user";
+import message, { setMessage } from "../../../flux/slices/message";
 
 const SingupScreen = ({ navigation }) => {
   const themeStyle = useTheme();

@@ -3,13 +3,12 @@ import { View, ScrollView, Image } from "react-native";
 import { Link } from "@react-navigation/native";
 import { Button, Text, TextInput, useTheme } from "react-native-paper";
 import style from "./style";
-import { logo1, logo2 } from "../../assets";
+import { logo1, logo2 } from "../../../assets";
 import { useDispatch, useSelector } from "react-redux";
-import { selectTheme } from "../../flux/slices/theme";
-import { loginRequest } from "../../services/singup-service";
-import { selectUser, setIsAuhtenticate, setUser } from "../../flux/slices/user";
-import { selectMessage, setMessage } from "../../flux/slices/message";
-import api from "../../axios/api";
+import { selectTheme } from "../../../flux/slices/theme";
+import { selectUser, setIsAuhtenticate, setUser } from "../../../flux/slices/user";
+import { selectMessage, setMessage } from "../../../flux/slices/message";
+import api from "../../../axios/api";
 
 const LoginScreen = ({ navigation }) => {
   const themeStyle = useTheme();

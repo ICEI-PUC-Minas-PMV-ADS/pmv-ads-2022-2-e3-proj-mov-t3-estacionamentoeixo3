@@ -22,14 +22,14 @@ const HomeScreen = (props) => {
 
   useEffect(() => {
     handlleRequestBackend();
-    console.log(park.parks);
+    //console.log(park.parks);
   });
 
   const handlleRequestBackend = async () => {
     try {
       const respo = await api.get("/parkLocations");
       dispatch(setPark({ ...park, parks: respo.data }));
-    } catch (err) {}
+    } catch (err) { }
   };
 
   return (

@@ -6,9 +6,9 @@ import Header from "../components/header";
 
 const routes = [
     // { name: "Login", "component": LoginScreen },
-    // { name: "Singup", component: SingScreen },
+     { name: "Singup", component: SingScreen },
     // { name: "Home", component: HomeScreen },
-    { name: "LoginAdm", component: LoginAdm },
+    //{ name: "LoginAdm", component: LoginAdm },
 ];
 
 const Stack = createStackNavigator();

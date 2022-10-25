@@ -9,7 +9,6 @@ import {
   Text,
   TextInput,
   useTheme,
-  SegmentedButtons,
 } from "react-native-paper";
 import style from "./style";
 import logo1 from "../../../assets/logo_up1.png";
@@ -95,21 +94,6 @@ const SingupScreen = ({ navigation }) => {
           </Text>
         </View>
 
-        <SegmentedButtons
-          value={mode}
-          onValueChange={setMode}
-          buttons={[
-            {
-              value: "user",
-              label: "Cliente",
-            },
-            {
-              value: "adm",
-              label: "Estacionamento",
-            },
-          ]}
-        />
-        {mode === "user" ? (
           <View style={style.form}>
             <TextInput
               mode="outlined"
@@ -182,80 +166,7 @@ const SingupScreen = ({ navigation }) => {
               <Text style={[{ ...style.button.text }]}>Cadastrar</Text>
             </Button>
           </View>
-        ) : (
-          <View style={style.form}>
-            <TextInput
-              mode="outlined"
-              label="Email"
-              theme={{
-                colors: {
-                  text: "#5E5CE5",
-                  placeholder: "#5E5CE5",
-                },
-              }}
-              outlineColor="#5E5CE5"
-              selectionColor="#5E5CE5"
-              style={[{ ...style.input }]}
-              value={email}
-              onChangeText={(email) => setEmail(email)}
-            />
-            <TextInput
-              mode="outlined"
-              label="Nome"
-              theme={{
-                colors: {
-                  text: "#5E5CE5",
-                  placeholder: "#5E5CE5",
-                },
-              }}
-              outlineColor="#5E5CE5"
-              selectionColor="#5E5CE5"
-              style={[{ ...style.input }]}
-              value={name}
-              onChangeText={(nome) => setName(nome)}
-            />
-            <TextInput
-              mode="outlined"
-              label="Digite uma senha"
-              theme={{
-                colors: {
-                  text: "#5E5CE5",
-                  placeholder: "#5E5CE5",
-                },
-              }}
-              outlineColor="#5E5CE5"
-              selectionColor="#5E5CE5"
-              secureTextEntry
-              style={[{ ...style.input }]}
-              value={password}
-              onChangeText={(pass) => setPassword(pass)}
-            />
-            <TextInput
-              mode="outlined"
-              label="Confirme a senha"
-              theme={{
-                colors: {
-                  text: "#5E5CE5",
-                  placeholder: "#5E5CE5",
-                },
-              }}
-              outlineColor="#5E5CE5"
-              selectionColor="#5E5CE5"
-              secureTextEntry
-              style={[{ ...style.input }]}
-              value={passwordRepeat}
-              onChangeText={(pass) => setPasswordRepeat(pass)}
-            />
-
-            <Button
-              style={style.button}
-              mode="contained"
-              onPress={(e) => onSubmit(e)}
-            >
-              <Text style={[{ ...style.button.text }]}>Cadastrar</Text>
-            </Button>
-          </View>
-        )}
+        )
         <Text style={[{ ...style.link_create, ...themes }]}>
           <Text> Ja tem uma conta? </Text>
           <Link to={"/Login"}>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SafeAreaView, ImageBase, View, ScrollView, Image } from "react-native";
 import { Link, R } from "@react-navigation/native";
 import api from "../../../axios/api";
@@ -22,13 +22,26 @@ import {
   setUser,
 } from "../../../flux/slices/user";
 import message, { setMessage } from "../../../flux/slices/message";
+import SegmentButton from "./ComponentSegmentButton";
 
 const SingupScreen = ({ navigation }) => {
+  //State themaDarc
   const themeStyle = useTheme();
-  const [email, setEmail] = useState(null);
-  const [name, setName] = useState(null);
-  const [password, setPassword] = useState(null);
-  const [passwordRepeat, setPasswordRepeat] = useState(null);
+  const [userModel, setUserModel] = useState({
+    email: "",
+    name: "",
+    password: "",
+    passwordRepeat: "",
+  });
+
+  const [estacionamentoModel, setEstacionamentoModel] = useState({
+    email: "",
+    razao: "",
+    cnpj: "",
+    password: "",
+    passwordRepeat: "",
+  });
+
   const [mode, setMode] = useState("user");
 
   const { theme } = useSelector(selectTheme);
@@ -42,44 +55,56 @@ const SingupScreen = ({ navigation }) => {
   };
 
   const onSubmit = async (e) => {
-    if (!email && !name && !password && !passwordRepeat) {
-      return;
-    }
-    //Atualiza o state com info dos user
-    dispatch(setUser({ ...user, email, nome: name }));
-    //Verifica se as senhas são iguais
-    if (password.includes(passwordRepeat)) {
-      api
-        .post("/users", {
-          email: email,
-          nome: name,
-          senha: password,
-        })
-        .then((response) => {
-          let { status, data } = response;
-          if (status === 200) {
-            dispatch(setIsAuhtenticate(true));
-            navigation.navigate("Login");
-          }
-        })
-        .catch((err) => {
-          const { data, status } = err.response;
-          dispatch(
-            setMessage({ state: true, text: data, status, type: "ERROR" })
-          );
-        });
+    const { name, email, password, passwordRepeat } = userModel;
+    if (mode === "user") {
+      if (!email && !name && !password && !passwordRepeat) {
+        return;
+      }
+      //Atualiza o state com info dos user
+      dispatch(setUser({ ...user, email, nome: name }));
+      //Verifica se as senhas são iguais
+      if (password.includes(passwordRepeat)) {
+        api
+          .post("/users", {
+            email: email,
+            nome: name,
+            senha: password,
+          })
+          .then((response) => {
+            let { status, data } = response;
+            if (status === 200) {
+              dispatch(setIsAuhtenticate(true));
+              navigation.navigate("Login");
+            }
+          })
+          .catch((err) => {
+            const { data, status } = err.response;
+            dispatch(
+              setMessage({ state: true, text: data, status, type: "ERROR" })
+            );
+          });
+      } else {
+        dispatch(
+          setMessage({
+            state: true,
+            text: "As senhas não são iguais!",
+            status: 404,
+            type: "ERROR",
+          })
+        );
+        return;
+      }
     } else {
-      dispatch(
-        setMessage({
-          state: true,
-          text: "As senhas não são iguais!",
-          status: 404,
-          type: "ERROR",
-        })
-      );
-      return;
+      //Estacionamento
     }
   };
+  const setModeState = (e) => {
+    setMode(e);
+  };
+
+  useEffect(() => {
+    console.log(mode);
+  }, [mode]);
 
   return (
     <ScrollView>
@@ -93,22 +118,8 @@ const SingupScreen = ({ navigation }) => {
           <Text style={style.text_subtitle}>
             Encontre as melhores vagas perto de você
           </Text>
+          <SegmentButton value={mode} setValue={setModeState} />
         </View>
-
-        <SegmentedButtons
-          value={mode}
-          onValueChange={setMode}
-          buttons={[
-            {
-              value: "user",
-              label: "Cliente",
-            },
-            {
-              value: "adm",
-              label: "Estacionamento",
-            },
-          ]}
-        />
         {mode === "user" ? (
           <View style={style.form}>
             <TextInput
@@ -123,8 +134,10 @@ const SingupScreen = ({ navigation }) => {
               outlineColor="#5E5CE5"
               selectionColor="#5E5CE5"
               style={[{ ...style.input }]}
-              value={email}
-              onChangeText={(email) => setEmail(email)}
+              value={userModel.email}
+              onChangeText={(email) =>
+                setUserModel((state) => ({ ...state, email: email }))
+              }
             />
             <TextInput
               mode="outlined"
@@ -138,8 +151,10 @@ const SingupScreen = ({ navigation }) => {
               outlineColor="#5E5CE5"
               selectionColor="#5E5CE5"
               style={[{ ...style.input }]}
-              value={name}
-              onChangeText={(nome) => setName(nome)}
+              value={userModel.name}
+              onChangeText={(nome) =>
+                setUserModel((state) => ({ ...state, name: nome }))
+              }
             />
             <TextInput
               mode="outlined"
@@ -154,8 +169,10 @@ const SingupScreen = ({ navigation }) => {
               selectionColor="#5E5CE5"
               secureTextEntry
               style={[{ ...style.input }]}
-              value={password}
-              onChangeText={(pass) => setPassword(pass)}
+              value={userModel.password}
+              onChangeText={(password) =>
+                setUserModel((state) => ({ ...state, password: password }))
+              }
             />
             <TextInput
               mode="outlined"
@@ -170,10 +187,14 @@ const SingupScreen = ({ navigation }) => {
               selectionColor="#5E5CE5"
               secureTextEntry
               style={[{ ...style.input }]}
-              value={passwordRepeat}
-              onChangeText={(pass) => setPasswordRepeat(pass)}
+              value={userModel.passwordRepeat}
+              onChangeText={(pass) =>
+                setUserModel((state) => ({
+                  ...state,
+                  passwordRepeat: pass,
+                }))
+              }
             />
-
             <Button
               style={style.button}
               mode="contained"
@@ -186,7 +207,7 @@ const SingupScreen = ({ navigation }) => {
           <View style={style.form}>
             <TextInput
               mode="outlined"
-              label="Email"
+              label="Email Estacionamento"
               theme={{
                 colors: {
                   text: "#5E5CE5",
@@ -196,12 +217,14 @@ const SingupScreen = ({ navigation }) => {
               outlineColor="#5E5CE5"
               selectionColor="#5E5CE5"
               style={[{ ...style.input }]}
-              value={email}
-              onChangeText={(email) => setEmail(email)}
+              value={estacionamentoModel.email}
+              onChangeText={(email) =>
+                setEstacionamentoModel((state) => ({ ...state, email }))
+              }
             />
             <TextInput
               mode="outlined"
-              label="Nome"
+              label="Razão Social"
               theme={{
                 colors: {
                   text: "#5E5CE5",
@@ -211,8 +234,27 @@ const SingupScreen = ({ navigation }) => {
               outlineColor="#5E5CE5"
               selectionColor="#5E5CE5"
               style={[{ ...style.input }]}
-              value={name}
-              onChangeText={(nome) => setName(nome)}
+              value={estacionamentoModel.razao}
+              onChangeText={(rzs) =>
+                setEstacionamentoModel((state) => ({ ...state, razao: rzs }))
+              }
+            />
+            <TextInput
+              mode="outlined"
+              label="CNPJ"
+              theme={{
+                colors: {
+                  text: "#5E5CE5",
+                  placeholder: "#5E5CE5",
+                },
+              }}
+              outlineColor="#5E5CE5"
+              selectionColor="#5E5CE5"
+              style={[{ ...style.input }]}
+              value={estacionamentoModel.cnpj}
+              onChangeText={(cnpj) =>
+                setEstacionamentoModel((state) => ({ ...state, cnpj }))
+              }
             />
             <TextInput
               mode="outlined"
@@ -227,8 +269,10 @@ const SingupScreen = ({ navigation }) => {
               selectionColor="#5E5CE5"
               secureTextEntry
               style={[{ ...style.input }]}
-              value={password}
-              onChangeText={(pass) => setPassword(pass)}
+              value={estacionamentoModel.password}
+              onChangeText={(pass) =>
+                setEstacionamentoModel((state) => ({ ...state, pass }))
+              }
             />
             <TextInput
               mode="outlined"
@@ -243,8 +287,13 @@ const SingupScreen = ({ navigation }) => {
               selectionColor="#5E5CE5"
               secureTextEntry
               style={[{ ...style.input }]}
-              value={passwordRepeat}
-              onChangeText={(pass) => setPasswordRepeat(pass)}
+              value={estacionamentoModel.passwordRepeat}
+              onChangeText={(pass) =>
+                setEstacionamentoModel((state) => ({
+                  ...state,
+                  passwordRepeat: pass,
+                }))
+              }
             />
 
             <Button

@@ -16,7 +16,7 @@ import logo2 from "../../../assets/logo_up2.png";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTheme } from "../../../flux/slices/theme";
 import { selectUser, setIsAuhtenticate, setUser } from "../../../flux/slices/user";
-import message, { setMessage } from "../../../flux/slices/message";
+//import message, { setMessage } from "../../../flux/slices/message";
 
 const SingupScreen = ({ navigation }) => {
   const themeStyle = useTheme();

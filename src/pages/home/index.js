@@ -15,6 +15,8 @@ import api from "../../axios/api";
 import { selectPark, setPark } from "../../flux/slices/park";
 
 const HomeScreen = (props) => {
+  const [info, setInfoMark] = useState({});
+ 
   const dispatch = useDispatch();
   //const {theme} = useSelector(selectTheme)
   const { park } = useSelector(selectPark);
@@ -29,7 +31,8 @@ const HomeScreen = (props) => {
     try {
       const respo = await api.get("/parkLocations");
       dispatch(setPark({ ...park, parks: respo.data }));
-    } catch (err) { }
+   
+    } catch (err) {}
   };
 
   return (
@@ -42,7 +45,7 @@ const HomeScreen = (props) => {
           justifyContent: "center",
         }}
       >
-        <MapsComponent />
+        <MapsComponent info={info}  />
       </View>
       <View style={{ paddingStart: 8, paddingEnd: 8, paddingTop: 6 }}>
         <Searchbar
@@ -63,7 +66,9 @@ const HomeScreen = (props) => {
             title={park.nome}
             description={park.rua}
             left={(props) => <List.Icon {...props} icon="car" />}
-            onPress={(e) => alert(park.id)}
+            onPress={(e) => {
+              setInfoMark(park);
+            }}
           />
         ))}
       </View>

@@ -68,7 +68,7 @@ const HomeScreen = (props) => {
             left={(props) => <List.Icon {...props} icon="car" />}
             onPress={(e) => {
               setInfoMark(park);
-            }}
+            }} 
           />
         ))}
       </View>

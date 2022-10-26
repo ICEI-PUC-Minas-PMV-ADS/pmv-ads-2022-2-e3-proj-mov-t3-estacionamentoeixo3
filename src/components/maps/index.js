@@ -54,7 +54,7 @@ export const MapsComponent = ({ info: { nome, latitude, longitude } }) => {
               {nome ? nome : "Puc Minas - Park"}
             </Text>
             <Avatar.Icon
-              size={32}
+              size={32} 
               icon="car"
               theme={{
                 colors: {

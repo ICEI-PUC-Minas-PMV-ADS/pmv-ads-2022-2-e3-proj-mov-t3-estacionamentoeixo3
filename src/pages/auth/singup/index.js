@@ -16,6 +16,10 @@ import logo1 from "../../../assets/logo_up1.png";
 import logo2 from "../../../assets/logo_up2.png";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTheme } from "../../../flux/slices/theme";
+<<<<<<< HEAD
+import { selectUser, setIsAuhtenticate, setUser } from "../../../flux/slices/user";
+//import message, { setMessage } from "../../../flux/slices/message";
+=======
 import {
   selectUser,
   setIsAuhtenticate,
@@ -23,6 +27,7 @@ import {
 } from "../../../flux/slices/user";
 import message, { setMessage } from "../../../flux/slices/message";
 import SegmentButton from "./ComponentSegmentButton";
+>>>>>>> 23826cdeb3084b176d00542c9bc42009ec4dfb40
 
 const SingupScreen = ({ navigation }) => {
   //State themaDarc

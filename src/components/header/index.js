@@ -3,18 +3,24 @@ import { SafeAreaView, StatusBar, View } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { useTheme, Appbar, Switch, Avatar } from "react-native-paper";
 import { selectTheme, setTheme } from "../../flux/slices/theme";
+import {
+  selectDetailNavigation,
+  setDetailNavigation,
+} from "../../flux/slices/detailNav";
 import Icon from "react-native-vector-icons/Feather";
 
 const Header = ({ route, navigation }) => {
   const themeSTyle = useTheme();
   const dispatch = useDispatch();
   const { theme } = useSelector(selectTheme);
+  const {
+    detailNavigation: { state },
+  } = useSelector(selectDetailNavigation);
   const handlerStateSwitch = () => dispatch(setTheme(!theme));
-
   return (
     <Appbar.Header
       dark={true}
-        statusBarHeight={1}
+      statusBarHeight={1}
       style={{
         height: 34,
         display: "flex",
@@ -35,24 +41,47 @@ const Header = ({ route, navigation }) => {
           width: "100%",
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "flex-end",
+          justifyContent: "space-between",
           paddingEnd: 11,
         }}
       >
         <Icon
-          name={theme ? "moon" : "sun"}
-            style={{marginTop:-2}}
-          size={29}
+          name={"arrow-left"}
+          style={{
+            marginTop: -2,
+            fontWeight: "bold",
+            display: !state ? "none" : "flex",
+          }}
+          size={30}
           color={theme ? "#5E5CE5" : "hsl(48, 100%, 70%)"}
           brand={true}
+          onPress={() => dispatch(setDetailNavigation({ state: !state }))}
         />
-        <Switch
-          style={[{ marginTop:-2}]}
-          color={theme ? "#fff" : "#000"}
-          value={theme}
-          thumbColor={theme ? "#000" : "#fff"}
-          onChange={handlerStateSwitch}
-        />
+
+        <View
+          style={{
+            display: "flex",
+            width: "100%",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "flex-end",
+          }}
+        >
+          <Icon
+            name={theme ? "moon" : "sun"}
+            style={{ marginTop: -2 }}
+            size={29}
+            color={theme ? "#5E5CE5" : "hsl(48, 100%, 70%)"}
+            brand={true}
+          />
+          <Switch
+            style={[{ marginTop: -2 }]}
+            color={theme ? "#fff" : "#000"}
+            value={theme}
+            thumbColor={theme ? "#000" : "#fff"}
+            onChange={handlerStateSwitch}
+          />
+        </View>
       </View>
     </Appbar.Header>
   );

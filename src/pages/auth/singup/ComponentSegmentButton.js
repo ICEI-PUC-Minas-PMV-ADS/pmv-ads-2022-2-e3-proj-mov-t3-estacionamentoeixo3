@@ -14,10 +14,12 @@ const SegmentButton = ({ value, setValue }) => {
         {
           value: "user",
           label: "Cliente",
+          icon: "employee",
         },
         {
           value: "adm",
-          label: "Pack",
+          label: "Park",
+          icon: "busines",
         },
       ]}
     />

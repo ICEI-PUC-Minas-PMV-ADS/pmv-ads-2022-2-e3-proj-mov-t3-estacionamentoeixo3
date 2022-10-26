@@ -63,7 +63,7 @@ const HomeScreen = (props) => {
             height: 48,
             backgroundColor: "#FFF",
             width: "100%",
-            display: "none",
+            display: !state ? "flex" : "none",
           }}
           placeholder="Pesquise o estacionamento"
           loading

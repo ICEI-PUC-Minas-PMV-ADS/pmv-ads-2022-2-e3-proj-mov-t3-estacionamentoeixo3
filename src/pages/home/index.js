@@ -6,20 +6,25 @@ import {
   TextInput,
   Searchbar,
   useTheme,
-  List,
 } from "react-native-paper";
 import { MapsComponent } from "../../components/maps";
 import { selectTheme } from "../../flux/slices/theme";
 import { useDispatch, useSelector } from "react-redux";
 import api from "../../axios/api";
 import { selectPark, setPark } from "../../flux/slices/park";
+import ListPark from "../../components/ListPark";
+import DetailParkOnSelected from "../../components/DetailPark";
+import { selectDetailNavigation } from "../../flux/slices/detailNav";
 
 const HomeScreen = (props) => {
   const [info, setInfoMark] = useState({});
- 
+
   const dispatch = useDispatch();
   //const {theme} = useSelector(selectTheme)
   const { park } = useSelector(selectPark);
+  const {
+    detailNavigation: { state },
+  } = useSelector(selectDetailNavigation);
   const themeSelect = useTheme();
 
   useEffect(() => {
@@ -31,8 +36,11 @@ const HomeScreen = (props) => {
     try {
       const respo = await api.get("/parkLocations");
       dispatch(setPark({ ...park, parks: respo.data }));
-   
     } catch (err) {}
+  };
+
+  const pressCallback = (park) => {
+    setInfoMark(park);
   };
 
   return (
@@ -45,11 +53,18 @@ const HomeScreen = (props) => {
           justifyContent: "center",
         }}
       >
-        <MapsComponent info={info}  />
+        {/*Componente Map View */}
+        <MapsComponent info={info} />
       </View>
       <View style={{ paddingStart: 8, paddingEnd: 8, paddingTop: 6 }}>
+        {/*Input Search Park*/}
         <Searchbar
-          style={{ height: 48, backgroundColor: "#FFF", width: "100%" }}
+          style={{
+            height: 48,
+            backgroundColor: "#FFF",
+            width: "100%",
+            display: "none",
+          }}
           placeholder="Pesquise o estacionamento"
           loading
           theme={{
@@ -60,17 +75,13 @@ const HomeScreen = (props) => {
             },
           }}
         />
-        {park.parks?.map((park) => (
-          <List.Item
-            key={park.id}
-            title={park.nome}
-            description={park.rua}
-            left={(props) => <List.Icon {...props} icon="car" />}
-            onPress={(e) => {
-              setInfoMark(park);
-            }} 
-          />
-        ))}
+        {/*Componente List Park*/}
+        <ListPark
+          parks={park?.parks}
+          pressCallback={pressCallback}
+          hide={state}
+        />
+        <DetailParkOnSelected hide={state} />
       </View>
     </ScrollView>
   );

@@ -1,29 +1,44 @@
 import React, { useEffect, useState } from "react";
-import { SegmentedButtons } from "react-native-paper";
-const SegmentButton = ({ value, setValue }) => {
-  const [mode, setMode] = useState("user");
+import { SegmentedButtons, useTheme } from "react-native-paper";
+const SegmentButtonComponent = ({ value, setValue }) => {
+  const theme = useTheme();
+  const [mode, setMode] = useState(value);
   useEffect(() => {
     setValue(mode);
   }, [mode]);
   return (
     <SegmentedButtons
-      value={mode}
+      style={{
+        marginTop: 20,
+        backgroundColor: "#fff",
+        borderRadius: 60,
+      }}
+      theme={{
+        colors: {
+          text: "#fff",
+        },
+      }}
       onValueChange={setMode}
-      density="small"
+      value={value}
+      density="regular"
       buttons={[
         {
           value: "user",
           label: "Cliente",
-          icon: "employee",
+          icon: "user",
+          style: { backgroundColor: value === "user" ? "#5E5CE5" : "#FFF" },
         },
         {
-          value: "adm",
-          label: "Park",
-          icon: "busines",
+          value: "park",
+          label: "Estacionamento",
+          icon: "car",
+          style: {
+            backgroundColor: value === "park" ? "#5E5CE5" : "#FFF",
+          },
         },
       ]}
     />
   );
 };
 
-export default SegmentButton;
+export default SegmentButtonComponent;

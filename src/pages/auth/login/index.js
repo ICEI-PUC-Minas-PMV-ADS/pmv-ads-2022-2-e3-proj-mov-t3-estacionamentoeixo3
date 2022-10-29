@@ -6,9 +6,14 @@ import style from "./style";
 import { logo1, logo2 } from "../../../assets";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTheme } from "../../../flux/slices/theme";
-import { selectUser, setIsAuhtenticate, setUser } from "../../../flux/slices/user";
+import {
+  selectUser,
+  setIsAuhtenticate,
+  setUser,
+} from "../../../flux/slices/user";
 import { selectMessage, setMessage } from "../../../flux/slices/message";
 import api from "../../../axios/api";
+import { setIsParkAuhtenticate } from "../../../flux/slices/parkAuth";
 
 const LoginScreen = ({ navigation }) => {
   const themeStyle = useTheme();
@@ -40,13 +45,22 @@ const LoginScreen = ({ navigation }) => {
         senha: password,
       });
 
-      let { status } = response;
+      let { status, data } = response;
       if (status === 200) {
-        dispatch(setIsAuhtenticate(true));
-        navigation.navigate("Home");
+        //Verifica se o login é de usuário ou estacionamento
+        if (data.role === "park") {
+          dispatch(setIsParkAuhtenticate(true));
+          //caso seja o estacionamento vai para o dashboard
+          navigation.navigate("Dashboard");
+        } else {
+          //caso seja o usuario  vai para o Home
+          dispatch(setIsAuhtenticate(true));
+          navigation.navigate("Home");
+        }
       }
     } catch (err) {
       dispatch(setIsAuhtenticate(false));
+      dispatch(setIsParkAuhtenticate(false));
       dispatch(
         setMessage({
           text: err.response.data,
@@ -108,7 +122,7 @@ const LoginScreen = ({ navigation }) => {
             mode="contained"
             onPress={(e) => onSubmit(e)}
           >
-            <Text style={[{ ...style.button.text }]}>Entrar</Text>
+            <Text style={[{ ...style.button.text }]}>Cadastrar</Text>
           </Button>
         </View>
 

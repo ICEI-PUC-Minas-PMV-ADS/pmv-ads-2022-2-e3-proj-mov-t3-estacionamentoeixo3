@@ -3,6 +3,7 @@ import theme from "../slices/theme";
 import user from "../slices/user";
 import park from "../slices/park";
 import detailNavigation from "../slices/detailNav";
+import parkAuth from "../slices/parkAuth";
 
 import { combineReducers } from "redux";
 
@@ -12,4 +13,5 @@ export default combineReducers({
   user,
   park,
   detailNavigation,
+  parkAuth,
 });

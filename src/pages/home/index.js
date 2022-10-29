@@ -47,6 +47,7 @@ const HomeScreen = (props) => {
   };
   const pressCallback = (park) => {
     setInfoMark(park);
+    console.log(park);
     setTextFilter("");
     setCleanParcks();
   };
@@ -101,7 +102,7 @@ const HomeScreen = (props) => {
           pressCallback={pressCallback}
           hide={state}
         />
-        <DetailParkOnSelected hide={state} />
+        <DetailParkOnSelected hide={state} info={info} />
       </View>
     </ScrollView>
   );

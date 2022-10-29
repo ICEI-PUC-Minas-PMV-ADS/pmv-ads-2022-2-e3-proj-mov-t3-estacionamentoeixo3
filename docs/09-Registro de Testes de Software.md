@@ -43,6 +43,53 @@ Em anexo, as imagens ilustrativas que demonstram passo a passo a utilização da
 ![8](https://user-images.githubusercontent.com/90852295/194711848-eaf94b25-1442-456b-b5bf-8ad180e8188c.png)
 
 
+• Caso de teste CT 02 - O sistema deve apresentar um mecanismo de busca que permita ao cliente localizar estacionamentos cadastrados que possuam vagas para estacionamento imediato de acordo com sua localização.
+
+![c02](https://user-images.githubusercontent.com/90852295/198856040-1d2b8e50-7a53-4604-a81f-2c69b0eaa698.png)
+
+1.1 –  Usuário efetuou login no sistema: 
+
+![login](https://user-images.githubusercontent.com/90852295/198855997-ca651f78-0646-41ff-8dce-4382c4c6f3ea.png)
+
+1.2 – Usuário foi direcionado para o menu com os estacionamentos disponíveis na região:
+
+![menu mapas](https://user-images.githubusercontent.com/90852295/198856000-02a0e087-0441-4cd7-a456-7a04830c87d1.png)
+
+1.3 – Usuário escolheu estacionamento desejado: 
+
+![estacionamentos](https://user-images.githubusercontent.com/90852295/198856022-6cb9df1b-0217-4925-8d6c-87ba4294041f.png)
+
+
+• Caso de teste CT 04 -O sistema deve permitir, a partir da localização geográfica, que o cliente seja redirecionado ao aplicativo de navegação do dispositivo móvel:
+
+![c04](https://user-images.githubusercontent.com/90852295/198855743-43798fc4-22bb-40c2-9b63-572ab7fb1ec4.png)
+
+1.1 – Usuário acessou a página de login do sistema:
+
+![1](https://user-images.githubusercontent.com/90852295/198856151-db17d70c-b330-4d57-9b1e-4a5644fff277.png)
+
+1.2 Usuário preenche os campos com os seus dados e clica no botão “Entrar”:
+
+![2](https://user-images.githubusercontent.com/90852295/198856161-0ee21608-4ed9-4e82-992e-cd16052a58f0.png)
+
+1.3 Após entrar, o usuário é redirecionado ao menu do aplicativo, onde conterá um mapa que exibirá estacionamentos de acordo com a localização do usuário, captada pelo localizador geográfico do seu dispositivo móvel
+
+![3](https://user-images.githubusercontent.com/90852295/198856129-ab25d50b-8a72-4b5c-87c8-6675437ad6be.png)
+
+
+• Caso de teste CT 07 - O sistema deve permitir o cadastro simplificado de empresas de estacionamentos:
+
+1.1 –  Usuário acessou a página de cadastro no sistema: 
+
+![cadastro estac](https://user-images.githubusercontent.com/90852295/198856084-bce02622-3abb-48fc-b896-db9837a98eb7.png)
+
+1.2 Usuário foi direcionado para o menu com formulário para preenchimento do cadastro:
+
+![dados cadastro](https://user-images.githubusercontent.com/90852295/198856085-3ddc729b-b732-47a6-ac40-98a99f1cd1b3.png)
+
+
+
+
 ## Avaliação
 
 Ao final, a equipe constatou que as funcionalidades pretendidas nesta fase de implementação do projeto atenderam às expectativas almejadas, ressalvadas as devidas modificações que se farão necessárias no decorrer do desenvolvimento das demais funcionalidades, como forma de melhoria da implementação.

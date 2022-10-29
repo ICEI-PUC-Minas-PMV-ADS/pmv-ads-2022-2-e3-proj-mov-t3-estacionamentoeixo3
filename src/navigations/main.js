@@ -10,10 +10,10 @@ import {
 import Header from "../components/header";
 
 const routes = [
-  { name: "Login", component: LoginScreen },
-  { name: "Singup", component: SingScreen },
+  // { name: "Login", component: LoginScreen },
+  // { name: "Singup", component: SingScreen },
+  // { name: "Dashboard", component: Dashboard },
   { name: "Home", component: HomeScreen },
-  { name: "Dashboard", component: Dashboard },
 ];
 
 const Stack = createStackNavigator();

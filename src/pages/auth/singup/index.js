@@ -21,7 +21,7 @@ import {
   setUser,
 } from "../../../flux/slices/user";
 import SegmentButtonComponent from "./ComponentSegmentButton";
-import { selectParkAuth } from "../../../flux/slices/parkAuth";
+import { selectParkAuth, setParkAuth } from "../../../flux/slices/parkAuth";
 //import message, { setMessage } from "../../../flux/slices/message";
 
 const SingupScreen = ({ navigation }) => {
@@ -104,11 +104,11 @@ const SingupScreen = ({ navigation }) => {
         return;
       }
       //Atualiza o state com info dos user
-      dispatch(setUser({ ...parkAuth, email, razao: razao }));
+      dispatch(setParkAuth({ ...parkAuth, email, razao: razao }));
       //Verifica se as senhas são iguais
       if (password.includes(passwordRepeat)) {
         api
-          .post("/park", {
+          .post("/parks", {
             email: email,
             razao: razao,
             cnpj: cnpj,

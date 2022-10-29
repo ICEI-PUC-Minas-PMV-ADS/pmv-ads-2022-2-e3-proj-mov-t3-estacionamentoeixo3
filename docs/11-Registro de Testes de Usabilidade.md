@@ -15,17 +15,43 @@ Funcionalidades implementadas:
 
 Na primeira fase do desenvolvimento foi implementada a seguinte funcionalidade:
 
-- Cadastro de usuário e login
+CTU-01 – O sistema deve permitir que o cliente crie uma conta para realizar um cadastro simples, com exigência de nome e e-mail, que permitirá efetuar login e acessar as funcionalidades do sistema.
 
 ![1](https://user-images.githubusercontent.com/90852295/194713164-85383215-a181-41a1-ae32-ab3ec18f7308.png)
 
 ![2](https://user-images.githubusercontent.com/90852295/194713168-4c528458-43ee-4602-8d9e-bc2877bcd8f0.png)
 
-![3](https://user-images.githubusercontent.com/90852295/194713407-f4847511-0053-41fd-8214-5aef8c567647.png)
 
-![4](https://user-images.githubusercontent.com/90852295/194713409-f072b549-7953-4061-ae88-eec308454c35.png)
 
-![5](https://user-images.githubusercontent.com/90852295/194713184-3f5de33f-c80a-4ab3-b653-ff613850b007.png)
+
+
+Nesta etapa foram implementadas as seguintes funcionalidades: 
+
+
+CTU-02 – O sistema deve apresentar um mecanismo de busca que permita ao cliente localizar estacionamentos cadastrados que possuam vagas para estacionamento imediato de acordo com sua localização:
+
+![c02](https://user-images.githubusercontent.com/90852295/198856409-d3c26d59-0eed-43d7-80a7-c4d483d6cad3.png)
+
+![1](https://user-images.githubusercontent.com/90852295/198856377-aa9c2513-cdb6-4357-a747-725181f8ed33.png)
+
+CT-04 – O sistema deve permitir, a partir da localização geográfica, que o cliente seja redirecionado ao aplicativo de navegação do dispositivo móvel:
+
+![c04](https://user-images.githubusercontent.com/90852295/198856468-03cad186-61e8-4ff3-a116-a500bc1a7b52.png)
+
+![2](https://user-images.githubusercontent.com/90852295/198856381-e16c2eca-bf0a-473c-94c3-771e46a781f8.png)
+
+
+CTU-07 – O sistema deve permitir o cadastro simplificado de empresas de estacionamentos:
+
+![c07](https://user-images.githubusercontent.com/90852295/198856492-6d2dc007-23d1-451e-9129-ee33aa4d078e.png)
+
+![3](https://user-images.githubusercontent.com/90852295/198856384-a3d03cba-94be-480c-a39e-3f2c3a5e094d.png)
+
+![heuris](https://user-images.githubusercontent.com/90852295/198856567-1ec33d5a-3e0f-4659-afc1-125cd43f5af3.png)
+
+![4](https://user-images.githubusercontent.com/90852295/198856385-3a76bf7b-010f-468b-b925-e3d0ee5d3906.png)
+
+![5](https://user-images.githubusercontent.com/90852295/198856391-7731f1f9-f60d-44ab-adff-9d10397366ce.png)
 
 
 Observações gerais

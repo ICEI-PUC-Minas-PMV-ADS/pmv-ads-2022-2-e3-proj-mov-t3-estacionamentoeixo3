@@ -122,7 +122,7 @@ const LoginScreen = ({ navigation }) => {
             mode="contained"
             onPress={(e) => onSubmit(e)}
           >
-            <Text style={[{ ...style.button.text }]}>Cadastrar</Text>
+            <Text style={[{ ...style.button.text }]}>Entrar</Text>
           </Button>
         </View>
 

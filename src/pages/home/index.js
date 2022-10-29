@@ -47,7 +47,6 @@ const HomeScreen = (props) => {
   };
   const pressCallback = (park) => {
     setInfoMark(park);
-    console.log(park);
     setTextFilter("");
     setCleanParcks();
   };

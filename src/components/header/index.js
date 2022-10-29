@@ -25,7 +25,7 @@ const Header = ({ route, navigation }) => {
         height: 34,
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
       }}
       theme={{
         dark: true,
@@ -41,8 +41,7 @@ const Header = ({ route, navigation }) => {
           width: "100%",
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "space-between",
-          paddingEnd: 11,
+          justifyContent: "space-around",
         }}
       >
         <Icon

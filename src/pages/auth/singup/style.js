@@ -18,7 +18,7 @@ export default StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginTop:29,
+    marginTop: 29,
     text: {
       fontWeight: "400",
       textAlign: "center",
@@ -48,17 +48,17 @@ export default StyleSheet.create({
   },
 
   form: {
-    marginTop: 50,
+    marginTop: 13,
     width: 340,
   },
   input: {
     height: 48,
-    marginTop: 5,
+    marginTop: 6,
     backgroundColor: "#FFF",
   },
   button: {
     width: "100%",
-    height: 60,
+    height: 50,
     marginTop: 20,
     display: "flex",
     alignItems: "center",
@@ -66,7 +66,7 @@ export default StyleSheet.create({
     text: {
       textAlign: "center",
       justifyContent: "center",
-      fontSize: 25,
+      fontSize:20,
       fontWeight: "bold",
       color: "#fff",
     },

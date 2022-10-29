@@ -39,27 +39,27 @@ export default StyleSheet.create({
     width: 340,
   },
   input: {
-    height:48,
+    height: 48,
     marginTop: 13,
     backgroundColor: "#FFF",
-    color:'#000'
+    color: "#000",
   },
   icon_eye: {
     color: "#5E5CE5",
   },
   button: {
     width: "100%",
-    height: 60,
-    marginTop: 35,
+    height: 50,
+    marginTop: 20,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     text: {
       textAlign: "center",
       justifyContent: "center",
-      fontSize: 25,
-      color: "#fff",
+      fontSize: 20,
       fontWeight: "bold",
+      color: "#fff",
     },
   },
   link_ou: {

@@ -1,12 +1,19 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { LoginScreen, HomeScreen, SingScreen, LoginAdm } from "../pages";
+import {
+  LoginScreen,
+  HomeScreen,
+  SingScreen,
+  LoginAdm,
+  Dashboard,
+} from "../pages";
 import Header from "../components/header";
 
 const routes = [
-  //   { name: "Login", component: LoginScreen },
-  // { name: "Singup", component: SingScreen },
-    { name: "Home", component: HomeScreen },
+  { name: "Login", component: LoginScreen },
+  { name: "Singup", component: SingScreen },
+  { name: "Home", component: HomeScreen },
+  { name: "Dashboard", component: Dashboard },
 ];
 
 const Stack = createStackNavigator();

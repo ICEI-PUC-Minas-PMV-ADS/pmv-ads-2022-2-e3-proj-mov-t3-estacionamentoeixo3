@@ -9,14 +9,19 @@ import {
   Text,
   TextInput,
   useTheme,
-  SegmentedButtons,
 } from "react-native-paper";
 import style from "./style";
 import logo1 from "../../../assets/logo_up1.png";
 import logo2 from "../../../assets/logo_up2.png";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTheme } from "../../../flux/slices/theme";
-import { selectUser, setIsAuhtenticate, setUser } from "../../../flux/slices/user";
+import {
+  selectUser,
+  setIsAuhtenticate,
+  setUser,
+} from "../../../flux/slices/user";
+import SegmentButtonComponent from "./ComponentSegmentButton";
+import { selectParkAuth } from "../../../flux/slices/parkAuth";
 //import message, { setMessage } from "../../../flux/slices/message";
 
 const SingupScreen = ({ navigation }) => {
@@ -41,6 +46,7 @@ const SingupScreen = ({ navigation }) => {
 
   const { theme } = useSelector(selectTheme);
   const { user } = useSelector(selectUser);
+  const { parkAuth } = useSelector(selectParkAuth);
   const dispatch = useDispatch();
 
   const themes = {
@@ -91,15 +97,55 @@ const SingupScreen = ({ navigation }) => {
       }
     } else {
       //Estacionamento
+      const { cnpj, email, password, passwordRepeat, razao } =
+        estacionamentoModel;
+
+      if (!cnpj && !email && !password && !passwordRepeat && !razao) {
+        return;
+      }
+      //Atualiza o state com info dos user
+      dispatch(setUser({ ...parkAuth, email, razao: razao }));
+      //Verifica se as senhas são iguais
+      if (password.includes(passwordRepeat)) {
+        api
+          .post("/park", {
+            email: email,
+            razao: razao,
+            cnpj: cnpj,
+            nome: name,
+            senha: password,
+          })
+          .then((response) => {
+            let { status, data } = response;
+            if (status === 200) {
+              dispatch(setIsParkAuhtenticate(true));
+              navigation.navigate("Login");
+            }
+          })
+          .catch((err) => {
+            const { data, status } = err.response;
+            dispatch(
+              setMessage({ state: true, text: data, status, type: "ERROR" })
+            );
+          });
+      } else {
+        dispatch(
+          setMessage({
+            state: true,
+            text: "As senhas não são iguais!",
+            status: 404,
+            type: "ERROR",
+          })
+        );
+        return;
+      }
     }
   };
   const setModeState = (e) => {
     setMode(e);
   };
 
-  useEffect(() => {
-    console.log(mode);
-  }, [mode]);
+  useEffect(() => {}, [mode]);
 
   return (
     <ScrollView>
@@ -113,8 +159,9 @@ const SingupScreen = ({ navigation }) => {
           <Text style={style.text_subtitle}>
             Encontre as melhores vagas perto de você
           </Text>
-          <SegmentButton value={mode} setValue={setModeState} />
+          <SegmentButtonComponent setValue={setMode} value={mode} />
         </View>
+
         {mode === "user" ? (
           <View style={style.form}>
             <TextInput

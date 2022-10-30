@@ -46,7 +46,7 @@ Em anexo, as imagens ilustrativas que demonstram passo a passo a utilização da
 
 • Caso de teste CT 02 - O sistema deve apresentar um mecanismo de busca que permita ao cliente localizar estacionamentos cadastrados que possuam vagas para estacionamento imediato de acordo com sua localização.
 
-![CT02](https://user-images.githubusercontent.com/88891675/198856506-61258de0-676f-41ff-91ce-6c4c68dff432.jpg)
+![CT02](https://user-images.githubusercontent.com/88891675/198892902-602fc032-3a39-4208-b204-edceafd96a6f.jpg)
 
 2.1 –  Usuário efetuou login no sistema: 
 
@@ -64,7 +64,7 @@ Em anexo, as imagens ilustrativas que demonstram passo a passo a utilização da
 
 • Caso de teste CT 04 -O sistema deve permitir, a partir da localização geográfica, que o cliente seja redirecionado ao aplicativo de navegação do dispositivo móvel:
 
-![CT04](https://user-images.githubusercontent.com/88891675/198856540-1f57e2b4-716a-42a5-962c-6b99ed9514d0.jpg)
+![CT04](https://user-images.githubusercontent.com/88891675/198892913-6e086ee4-ae56-4c7a-bbae-15bd2a0abdc4.jpg)
 
 4.1 – Usuário acessou a página de login do sistema:
 
@@ -82,7 +82,7 @@ Em anexo, as imagens ilustrativas que demonstram passo a passo a utilização da
 
 • Caso de teste CT 07 - O sistema deve permitir o cadastro simplificado de empresas de estacionamentos:
 
-![CT07](https://user-images.githubusercontent.com/88891675/198856561-65a8e59c-2111-46a5-9c12-bdfdf799b127.jpg)
+![CT07](https://user-images.githubusercontent.com/88891675/198892922-5421c42a-5b84-4188-9536-f0e45678dd6a.jpg)
 
 7.1 –  Usuário acessou a página de cadastro no sistema: 
 

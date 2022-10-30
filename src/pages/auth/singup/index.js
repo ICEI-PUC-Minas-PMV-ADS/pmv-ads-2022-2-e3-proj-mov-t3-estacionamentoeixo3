@@ -22,7 +22,7 @@ import {
 } from "../../../flux/slices/user";
 import SegmentButtonComponent from "./ComponentSegmentButton";
 import { selectParkAuth, setParkAuth } from "../../../flux/slices/parkAuth";
-//import message, { setMessage } from "../../../flux/slices/message";
+import message, { setMessage } from "../../../flux/slices/message";
 
 const SingupScreen = ({ navigation }) => {
   //State themaDarc

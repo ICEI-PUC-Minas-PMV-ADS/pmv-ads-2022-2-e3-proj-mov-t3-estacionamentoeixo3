@@ -13,6 +13,7 @@ import {
 } from "react-native-paper";
 import AwesomeIcon from "react-native-vector-icons/FontAwesome";
 import { useDispatch, useSelector } from "react-redux";
+import { selectDrawer, setDrawer } from "../../flux/slices/drawerMenu";
 import { selectTheme } from "../../flux/slices/theme";
 import user, { selectUser, setUser } from "../../flux/slices/user";
 
@@ -22,8 +23,8 @@ const SideBar = () => {
   const dispatch = useDispatch();
   const { theme } = useSelector(selectTheme);
   const {
-    user: { menuOpen },
-  } = useSelector(selectUser);
+    drawer: { menuOpen },
+  } = useSelector(selectDrawer);
   const [active, setActive] = React.useState("");
   return (
     <Drawer.Section
@@ -80,7 +81,7 @@ const SideBar = () => {
         onPress={() => {
           setActive("first");
           navigate.navigate("Perfil");
-          dispatch(setUser({ ...user, menuOpen: false }));
+          dispatch(setDrawer({ menuOpen: false }));
         }}
       />
       <Drawer.Item

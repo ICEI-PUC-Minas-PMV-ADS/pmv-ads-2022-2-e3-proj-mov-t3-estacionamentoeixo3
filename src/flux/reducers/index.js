@@ -4,6 +4,8 @@ import user from "../slices/user";
 import park from "../slices/park";
 import detailNavigation from "../slices/detailNav";
 import parkAuth from "../slices/parkAuth";
+import drawer from "../slices/drawerMenu";
+import userId from "../slices/userId";
 
 import { combineReducers } from "redux";
 
@@ -14,4 +16,6 @@ export default combineReducers({
   park,
   detailNavigation,
   parkAuth,
+  drawer,
+  userId,
 });

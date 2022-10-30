@@ -1,20 +1,13 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import {
-  LoginScreen,
-  HomeScreen,
-  SingScreen,
-  LoginAdm,
-  Dashboard,
-  Profile,
-} from "../pages";
+import { LoginScreen, HomeScreen, SingScreen, Profile } from "../pages";
 import Header from "../components/header";
 import SideBar from "../components/sideBar";
 import { View } from "react-native";
 
 const routes = [
-  // { name: "Login", component: LoginScreen, initial: true },
-  // { name: "Singup", component: SingScreen },
+  { name: "Login", component: LoginScreen, initial: true },
+  { name: "Singup", component: SingScreen },
   // { name: "Dashboard", component: Dashboard },
   { name: "Home", component: HomeScreen },
   { name: "Perfil", component: Profile },

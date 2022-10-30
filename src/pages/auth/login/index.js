@@ -14,6 +14,7 @@ import {
 import { selectMessage, setMessage } from "../../../flux/slices/message";
 import api from "../../../axios/api";
 import { setIsParkAuhtenticate } from "../../../flux/slices/parkAuth";
+import { setUserId } from "../../../flux/slices/userId";
 
 const LoginScreen = ({ navigation }) => {
   const themeStyle = useTheme();
@@ -52,20 +53,19 @@ const LoginScreen = ({ navigation }) => {
       });
 
       let { status, data } = response;
-      if (status === 200) {
-        //Verifica se o login é de usuário ou estacionamento
-        // if (data.role === "park") {
-        //   dispatch(setIsParkAuhtenticate(true));
-        //   //caso seja o estacionamento vai para o dashboard
-        //   navigation.navigate("Dashboard");
-        // } else {
-        //caso seja o usuario  vai para o Home
-        dispatch(setIsAuhtenticate(true));
-        navigation.navigate("Home");
-        // }
-      }
+      //Verifica se o login é de usuário ou estacionamento
+      // if (data.role === "park") {
+      //   dispatch(setIsParkAuhtenticate(true));
+      //   //caso seja o estacionamento vai para o dashboard
+      //   navigation.navigate("Dashboard");
+      // } else {
+      //caso seja o usuario  vai para o Home
+      // dispatch(setIsAuhtenticate(true));
+      await dispatch(setUserId({ id: data }));
+      navigation.navigate("Home");
+      // }
     } catch (err) {
-      dispatch(setIsAuhtenticate(false));
+      // dispatch(setIsAuhtenticate(false));
       // dispatch(setIsParkAuhtenticate(false));
       dispatch(
         setMessage({

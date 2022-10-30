@@ -33,7 +33,6 @@ const HomeScreen = (props) => {
 
   useEffect(() => {
     handlleRequestBackend();
-    //console.log(park.parks);
   });
 
   const handlleRequestBackend = async () => {

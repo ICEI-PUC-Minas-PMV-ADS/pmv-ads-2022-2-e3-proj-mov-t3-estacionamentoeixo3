@@ -11,6 +11,7 @@ import Icon from "react-native-vector-icons/Feather";
 import SideBar from "../sideBar";
 import user, { selectUser, setUser } from "../../flux/slices/user";
 import { NavigationHelpersContext } from "@react-navigation/native";
+import { selectDrawer, setDrawer } from "../../flux/slices/drawerMenu";
 
 const Header = ({ route, navigation }) => {
   const themeSTyle = useTheme();
@@ -20,8 +21,8 @@ const Header = ({ route, navigation }) => {
     detailNavigation: { state },
   } = useSelector(selectDetailNavigation);
   const {
-    user: { menuOpen },
-  } = useSelector(selectUser);
+    drawer: { menuOpen },
+  } = useSelector(selectDrawer);
   const handlerStateSwitch = () => dispatch(setTheme(!theme));
   return (
     <Appbar.Header
@@ -52,6 +53,7 @@ const Header = ({ route, navigation }) => {
           name={"arrow-left"}
           style={{
             marginTop: -2,
+            marginStart: 20,
             fontWeight: "bold",
             display: !state && route.name === "Home" ? "none" : "flex",
           }}
@@ -64,7 +66,7 @@ const Header = ({ route, navigation }) => {
             } else {
               dispatch(setDetailNavigation({ state: true }));
               navigation.navigate("Home");
-              dispatch(setUser({ ...user, menuOpen: false }));
+              dispatch(setDrawer({ menuOpen: false }));
             }
           }}
         />
@@ -106,7 +108,7 @@ const Header = ({ route, navigation }) => {
             size={29}
             color={theme ? "#5E5CE5" : "hsl(48, 100%, 70%)"}
             brand={true}
-            onPress={() => dispatch(setUser({ ...user, menuOpen: !menuOpen }))}
+            onPress={() => dispatch(setDrawer({ menuOpen: !menuOpen }))}
           />
         </View>
       </View>

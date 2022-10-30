@@ -10,6 +10,7 @@ import {
 import Icon from "react-native-vector-icons/Feather";
 import SideBar from "../sideBar";
 import user, { selectUser, setUser } from "../../flux/slices/user";
+import { NavigationHelpersContext } from "@react-navigation/native";
 
 const Header = ({ route, navigation }) => {
   const themeSTyle = useTheme();
@@ -33,8 +34,6 @@ const Header = ({ route, navigation }) => {
         justifyContent: "space-between",
       }}
       theme={{
-        dark: true,
-        mode: "",
         colors: {
           primary: themeSTyle.colors.background,
         },
@@ -54,12 +53,20 @@ const Header = ({ route, navigation }) => {
           style={{
             marginTop: -2,
             fontWeight: "bold",
-            display: !state ? "none" : "flex",
+            display: !state && route.name === "Home" ? "none" : "flex",
           }}
           size={30}
           color={theme ? "#5E5CE5" : "hsl(48, 100%, 70%)"}
           brand={true}
-          onPress={() => dispatch(setDetailNavigation({ state: !state }))}
+          onPress={() => {
+            if (route.name === "Home") {
+              dispatch(setDetailNavigation({ state: !state }));
+            } else {
+              dispatch(setDetailNavigation({ state: true }));
+              navigation.navigate("Home");
+              dispatch(setUser({ ...user, menuOpen: false }));
+            }
+          }}
         />
 
         <View

@@ -16,11 +16,12 @@ import ListPark from "../../components/ListPark";
 import DetailParkOnSelected from "../../components/DetailPark";
 import { selectDetailNavigation } from "../../flux/slices/detailNav";
 import Icon from "react-native-vector-icons/Feather";
+import SideBar from "../../components/sideBar";
 
 const HomeScreen = (props) => {
   const [info, setInfoMark] = useState({});
   const [dadosFilter, setDataFilter] = useState();
-  const [filterText, setTextFilter] = useState();
+  const [filterText, setTextFilter] = useState("");
 
   const dispatch = useDispatch();
   //const {theme} = useSelector(selectTheme)
@@ -52,6 +53,7 @@ const HomeScreen = (props) => {
   };
 
   const filterOnChange = (value) => {
+    setTextFilter(value);
     const DadosFiltrados = park.parks.filter((item) => {
       if (item.nome.includes(value) || item.rua.includes(value)) {
         return item;
@@ -86,7 +88,7 @@ const HomeScreen = (props) => {
           value={filterText}
           placeholder="Pesquise o estacionamento"
           onChangeText={filterOnChange}
-          clearIcon={"car"}
+          clearIcon={"close"}
           theme={{
             colors: {
               primary: themeSelect.colors.primary,

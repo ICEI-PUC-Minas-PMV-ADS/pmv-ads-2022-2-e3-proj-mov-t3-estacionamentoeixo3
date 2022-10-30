@@ -33,7 +33,13 @@ const LoginScreen = ({ navigation }) => {
 
   const onSubmit = async () => {
     if (!email && !password) {
-      resolve({ msg: "Verifique as credenciais", status: 205 });
+      dispatch(
+        setMessage({
+          text: "Verifique as credenciais",
+          status: 205,
+          type: "ERROR",
+        })
+      );
       return;
     }
     //Salva o user que fez login
@@ -48,19 +54,19 @@ const LoginScreen = ({ navigation }) => {
       let { status, data } = response;
       if (status === 200) {
         //Verifica se o login é de usuário ou estacionamento
-        if (data.role === "park") {
-          dispatch(setIsParkAuhtenticate(true));
-          //caso seja o estacionamento vai para o dashboard
-          navigation.navigate("Dashboard");
-        } else {
-          //caso seja o usuario  vai para o Home
-          dispatch(setIsAuhtenticate(true));
-          navigation.navigate("Home");
-        }
+        // if (data.role === "park") {
+        //   dispatch(setIsParkAuhtenticate(true));
+        //   //caso seja o estacionamento vai para o dashboard
+        //   navigation.navigate("Dashboard");
+        // } else {
+        //caso seja o usuario  vai para o Home
+        dispatch(setIsAuhtenticate(true));
+        navigation.navigate("Home");
+        // }
       }
     } catch (err) {
       dispatch(setIsAuhtenticate(false));
-      dispatch(setIsParkAuhtenticate(false));
+      // dispatch(setIsParkAuhtenticate(false));
       dispatch(
         setMessage({
           text: err.response.data,
@@ -110,7 +116,7 @@ const LoginScreen = ({ navigation }) => {
                 style={style.icon_eye}
                 onPress={() => setStatePassword(!viewPassword)}
                 color={style.icon_eye.color}
-                icon={!viewPassword ? "eye-off" : "eye"}
+                icon={!viewPassword ? "eye-slash" : "eye"}
               />
             }
             value={password}
@@ -122,7 +128,7 @@ const LoginScreen = ({ navigation }) => {
             mode="contained"
             onPress={(e) => onSubmit(e)}
           >
-            <Text style={[{ ...style.button.text }]}>Entrar</Text> 
+            <Text style={[{ ...style.button.text }]}>Entrar</Text>
           </Button>
         </View>
 

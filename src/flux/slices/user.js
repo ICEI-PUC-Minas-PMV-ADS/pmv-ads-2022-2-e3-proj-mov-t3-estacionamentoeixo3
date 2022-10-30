@@ -7,6 +7,7 @@ const userSlice = createSlice({
       authenticate: false,
       nome: "",
       email: "",
+      menuOpen: false,
     },
   },
   reducers: {

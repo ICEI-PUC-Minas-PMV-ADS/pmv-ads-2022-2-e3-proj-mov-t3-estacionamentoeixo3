@@ -52,18 +52,19 @@ const DetailParkOnSelected = ({ hide, info }) => {
         >
           Valores
         </Title>
-        <Paragraph>
+        <Paragraph style={{ color: theme ? "#000" : "#FFF" }}>
           <Text style={{ fontWeight: "bold", color: theme ? "#000" : "#FFF" }}>
             Preço Carro:R$:
           </Text>
           {info?.precoCarro}
         </Paragraph>
-        <Paragraph>
-          <Text style={{ fontWeight: "bold", color: theme ? "#000" : "#FFF" }}>
-            Preço Moto:R$:{info?.precoMoto}
-          </Text>
+        <Paragraph style={{ color: theme ? "#000" : "#FFF" }}>
+          <Text
+            style={{ fontWeight: "bold", color: theme ? "#000" : "#FFF" }}
+          ></Text>
+          Preço Moto:R$:{info?.precoMoto}
         </Paragraph>
-        <Button mode="contained" theme={theme} style={{ marginTop: 20 }}>
+        <Button mode="contained" theme={theme} style={{ marginTop: 70 }}>
           <Text theme={theme} style={{ color: "#FFF" }}>
             Reservar
           </Text>

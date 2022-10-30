@@ -8,6 +8,8 @@ import {
   setDetailNavigation,
 } from "../../flux/slices/detailNav";
 import Icon from "react-native-vector-icons/Feather";
+import SideBar from "../sideBar";
+import user, { selectUser, setUser } from "../../flux/slices/user";
 
 const Header = ({ route, navigation }) => {
   const themeSTyle = useTheme();
@@ -16,6 +18,9 @@ const Header = ({ route, navigation }) => {
   const {
     detailNavigation: { state },
   } = useSelector(selectDetailNavigation);
+  const {
+    user: { menuOpen },
+  } = useSelector(selectUser);
   const handlerStateSwitch = () => dispatch(setTheme(!theme));
   return (
     <Appbar.Header
@@ -79,6 +84,22 @@ const Header = ({ route, navigation }) => {
             value={theme}
             thumbColor={theme ? "#000" : "#fff"}
             onChange={handlerStateSwitch}
+          />
+          <Icon
+            name={!menuOpen ? "menu" : "x"}
+            style={{
+              marginTop: -2,
+              marginRight: 20,
+              marginLeft: 4,
+              display:
+                route.name === "Home" || route.name === "Perfil"
+                  ? "flex"
+                  : "none",
+            }}
+            size={29}
+            color={theme ? "#5E5CE5" : "hsl(48, 100%, 70%)"}
+            brand={true}
+            onPress={() => dispatch(setUser({ ...user, menuOpen: !menuOpen }))}
           />
         </View>
       </View>

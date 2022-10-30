@@ -13,16 +13,16 @@ Para a realização dos testes, será utilizado o Teste Funcional ou Teste da Ca
 
 Os testes funcionais a serem realizados no aplicativo estão descritos a seguir:
 
-![1](https://user-images.githubusercontent.com/90852295/194712837-48839a3a-5979-49ea-a0f2-93d5d548384c.png)
+![CT01](https://user-images.githubusercontent.com/88891675/198892982-4f7a9a7a-d3fe-47de-8b1a-2800d78f9806.jpg)
 
-![2](https://user-images.githubusercontent.com/90852295/194712832-6bd491b6-2832-42d4-86cf-54759af58b0f.png)
+![CT02](https://user-images.githubusercontent.com/88891675/198892984-87b77bd0-30e4-436a-824d-5aea5de11a24.jpg)
 
-![3](https://user-images.githubusercontent.com/90852295/194712845-bda64ca6-e339-4ff2-9837-8df7ba545799.png)
+![C0T3](https://user-images.githubusercontent.com/88891675/198892986-acca25d0-20a6-4863-8a9a-e5046a82e079.jpg)
 
-![4](https://user-images.githubusercontent.com/90852295/194712852-bed80cc6-b78b-4520-a501-436a1e296e2b.png)
+![CT04](https://user-images.githubusercontent.com/88891675/198892988-b4cd7f92-e39d-4ba8-8d21-f7206fb1e0ac.jpg)
 
-![5](https://user-images.githubusercontent.com/90852295/194712857-34251fd2-b752-439e-b7aa-96516db070ca.png)
+![CT05](https://user-images.githubusercontent.com/88891675/198892991-4ecccb13-37f5-4f23-8db9-f2a3717991cc.jpg)
 
-![6](https://user-images.githubusercontent.com/90852295/194712861-8dd7c0b2-5355-4506-bc9b-e4bb86c26437.png)
+![CT06](https://user-images.githubusercontent.com/88891675/198892994-1943d93d-3b5d-4fa4-8b34-b954a45c85d4.jpg)
 
-![7](https://user-images.githubusercontent.com/90852295/194712863-3d050114-ac7d-44ad-9ccc-ea0ee4560ce1.png)
+![CT07](https://user-images.githubusercontent.com/88891675/198892995-7497517c-7bff-489a-a4ad-4a7b13c7f19e.jpg)

@@ -48,20 +48,19 @@ Procedimentos prévios a serem realizados:
 
 Tarefas a serem executadas pelos participantes, de acordo com os casos de uso elencados no projeto:
 
-![1](https://user-images.githubusercontent.com/90852295/194712416-3fe27700-ad16-41b1-903e-f5794f806c52.png)
+![CT01](https://user-images.githubusercontent.com/88891675/198891613-ad0162a8-f7e9-4446-9b5c-725fa35d827c.jpg)
 
-![2](https://user-images.githubusercontent.com/90852295/194712420-8c69f488-73d0-473a-b540-4a4954299c83.png)
+![CT02](https://user-images.githubusercontent.com/88891675/198891824-904c64b2-5f3e-47ee-a143-f7af533e504d.jpg)
 
-![3](https://user-images.githubusercontent.com/90852295/194712427-d5667089-db70-498d-b8ce-8b06f72f08e1.png)
+![CT03](https://user-images.githubusercontent.com/88891675/198892185-d5410530-6eda-4678-9904-9fd808dc6b45.jpg)
 
-![4](https://user-images.githubusercontent.com/90852295/194712435-0f9c7011-9d4e-4828-b7aa-c9a83c8a35b3.png)
+![CT04](https://user-images.githubusercontent.com/88891675/198892178-bf67143b-a7f6-48d3-943b-21517c2aff6e.jpg)
 
-![5](https://user-images.githubusercontent.com/90852295/194712442-8268980b-89a2-43e9-a1d3-e6664ca59926.png)
+![CT05](https://user-images.githubusercontent.com/88891675/198892464-45b68de2-729a-40db-b1e3-07b2d0ab457d.jpg)
 
-![6](https://user-images.githubusercontent.com/90852295/194712445-5b8c0d12-1d7f-44e3-8d4a-aefc574871c1.png)
+![CT06](https://user-images.githubusercontent.com/88891675/198892549-60f3f4f0-ab80-4097-a0f1-23ef601409f9.jpg)
 
-![7](https://user-images.githubusercontent.com/90852295/194712450-896fd020-f5bb-4fac-9b05-702f9ebbe612.png)
-
+![CT07](https://user-images.githubusercontent.com/88891675/198892868-5c6aad69-a2a6-4740-b73f-b439eb6b4c9f.jpg)
 
 Através de uma escala de avaliação serão analisados os níveis de severidade de cada erro ou incompatibilidade eventualmente encontrados nas funcionalidades testadas, bem como serão avaliadas as heurísticas apresentadas na parte inicial deste plano de testes de usabilidade.
 

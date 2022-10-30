@@ -34,7 +34,6 @@ const Profile = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    alert("Hello");
     try {
       const respo = await axios.post(`/editUser/${id}`, {
         nome: userModel.name,

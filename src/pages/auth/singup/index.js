@@ -74,7 +74,6 @@ const SingupScreen = ({ navigation }) => {
           .then((response) => {
             let { status, data } = response;
             if (status === 200) {
-              dispatch(setIsAuhtenticate(true));
               navigation.navigate("Login");
             }
           })

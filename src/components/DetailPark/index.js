@@ -7,13 +7,21 @@ import {
   Avatar,
   useTheme,
   Text,
+  Modal,
 } from "react-native-paper";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTheme } from "../../flux/slices/theme";
-
-const DetailParkOnSelected = ({ hide, info }) => {
+const DetailParkOnSelected = ({ hide, info, setModal }) => {
   const themeSelected = useTheme();
   const dispatch = useDispatch();
+
+  const showModal = () => {
+    setModal(true);
+  };
+  const hideModal = () => {
+    setModal(false);
+  };
+
   const { theme } = useSelector(selectTheme);
   const LeftContent = (props) => <Avatar.Icon {...props} icon="car" />;
   return (
@@ -67,6 +75,16 @@ const DetailParkOnSelected = ({ hide, info }) => {
         <Button mode="contained" theme={theme} style={{ marginTop: 70 }}>
           <Text theme={theme} style={{ color: "#FFF" }}>
             Reservar
+          </Text>
+        </Button>
+        <Button
+          mode="contained"
+          theme={theme}
+          style={{ marginTop: 13 }}
+          onPress={showModal}
+        >
+          <Text theme={theme} style={{ color: "#FFF" }}>
+            FeedBack
           </Text>
         </Button>
       </Card.Content>

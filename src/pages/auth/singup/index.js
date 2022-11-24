@@ -32,6 +32,7 @@ const SingupScreen = ({ navigation }) => {
     name: "",
     password: "",
     passwordRepeat: "",
+    role: 0,
   });
 
   const [estacionamentoModel, setEstacionamentoModel] = useState({
@@ -40,6 +41,7 @@ const SingupScreen = ({ navigation }) => {
     cnpj: "",
     password: "",
     passwordRepeat: "",
+    role: 1,
   });
 
   const [mode, setMode] = useState("user");
@@ -56,7 +58,7 @@ const SingupScreen = ({ navigation }) => {
   };
 
   const onSubmit = async (e) => {
-    const { name, email, password, passwordRepeat } = userModel;
+    const { name, email, password, passwordRepeat, role } = userModel;
     if (mode === "user") {
       if (!email && !name && !password && !passwordRepeat) {
         return;
@@ -70,6 +72,7 @@ const SingupScreen = ({ navigation }) => {
             email: email,
             nome: name,
             senha: password,
+            role: role,
           })
           .then((response) => {
             let { status, data } = response;
@@ -79,6 +82,7 @@ const SingupScreen = ({ navigation }) => {
           })
           .catch((err) => {
             const { data, status } = err.response;
+            dispatch(setMessage({}));
             dispatch(
               setMessage({ state: true, text: data, status, type: "ERROR" })
             );
@@ -96,7 +100,7 @@ const SingupScreen = ({ navigation }) => {
       }
     } else {
       //Estacionamento
-      const { cnpj, email, password, passwordRepeat, razao } =
+      const { cnpj, email, password, passwordRepeat, razao, role } =
         estacionamentoModel;
 
       if (!cnpj && !email && !password && !passwordRepeat && !razao) {
@@ -113,6 +117,7 @@ const SingupScreen = ({ navigation }) => {
             cnpj: cnpj,
             nome: name,
             senha: password,
+            role: role,
           })
           .then((response) => {
             let { status, data } = response;

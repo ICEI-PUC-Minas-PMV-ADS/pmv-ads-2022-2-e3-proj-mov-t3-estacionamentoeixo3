@@ -55,7 +55,11 @@ const Header = ({ route, navigation }) => {
             marginTop: -2,
             marginStart: 20,
             fontWeight: "bold",
-            display: !state && route.name === "Home" ? "none" : "flex",
+            display:
+              (!state && route.name === "Home") ||
+              (route.name === "Login" || route.name === "Singup")
+                ? "none"
+                : "flex",
           }}
           size={30}
           color={theme ? "#5E5CE5" : "hsl(48, 100%, 70%)"}

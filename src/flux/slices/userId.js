@@ -9,6 +9,7 @@ const userIdSlice = createSlice({
   },
   reducers: {
     setUserId(state, action) {
+      console.log(action);
       state.userId = action.payload;
     },
   },

@@ -7,7 +7,7 @@ import store from "./flux/store";
 import LayoutProvider from "./components/layout/index.js";
 import { SafeAreaView, SafeAreaViewBase, StatusBar } from "react-native";
 import { selectTheme } from "./flux/slices/theme";
-import { useTheme } from "react-native-paper";
+import { BottomNavigation, Text, useTheme } from "react-native-paper";
 
 function App() {
   return (

@@ -1,8 +1,17 @@
 import React from "react";
-import { Text } from "react-native-paper";
+import { Screen, View } from "react-native";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import HomeScreen from "../home";
+import Profile from "../profile";
 
 const Dashboard = () => {
-  return <Text>Dashboard</Text>;
+  const Tab = createMaterialBottomTabNavigator();
+  return (
+    <Tab.Navigator shifting={false}>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Profile" component={Profile} />
+    </Tab.Navigator>
+  );
 };
 
 export default Dashboard;

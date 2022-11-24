@@ -54,16 +54,16 @@ const LoginScreen = ({ navigation }) => {
 
       let { status, data } = response;
       //Verifica se o login é de usuário ou estacionamento
-      // if (data.role === "park") {
-      //   dispatch(setIsParkAuhtenticate(true));
-      //   //caso seja o estacionamento vai para o dashboard
-      //   navigation.navigate("Dashboard");
-      // } else {
-      //caso seja o usuario  vai para o Home
-      // dispatch(setIsAuhtenticate(true));
-      await dispatch(setUserId({ id: data }));
-      navigation.navigate("Home");
-      // }
+      if (data["role"] === 1) {
+        dispatch(setIsParkAuhtenticate(true));
+        //caso seja o estacionamento vai para o dashboard
+        navigation.navigate("Dashboard");
+      } else {
+        //caso seja o usuario  vai para o Home
+        // dispatch(setIsAuhtenticate(true));
+        dispatch(setUserId({ id: data["id"] }));
+        navigation.navigate("Home");
+      }
     } catch (err) {
       // dispatch(setIsAuhtenticate(false));
       // dispatch(setIsParkAuhtenticate(false));

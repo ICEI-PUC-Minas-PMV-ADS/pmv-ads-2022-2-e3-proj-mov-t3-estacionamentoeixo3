@@ -41,6 +41,18 @@ CT-04 – O sistema deve permitir, a partir da localização geográfica, que o 
 ![2](https://user-images.githubusercontent.com/90852295/198856381-e16c2eca-bf0a-473c-94c3-771e46a781f8.png)
 
 
+CTU-05 – O sistema deve permitir que o cliente avalie um estacionamento utilizado por ele:
+
+![CT05](https://user-images.githubusercontent.com/90852295/204059890-1fe9b464-2bb4-48be-9196-e9f9696fb153.png)
+![REG05](https://user-images.githubusercontent.com/90852295/204060104-2aafffd8-23f2-4268-a9a6-b994cf09bce3.png)
+
+
+CTU-06 – O sistema deve permitir que o cliente faça comentários sobre um estacionamento utilizado por ele:
+
+![CT06](https://user-images.githubusercontent.com/90852295/204059970-de0a7799-b95f-405d-8935-e6e4de1fb8fc.png)
+
+![REG06](https://user-images.githubusercontent.com/90852295/204060113-ce63cc51-5925-43f3-bd51-61cb4daf61a0.png)
+
 CTU-07 – O sistema deve permitir o cadastro simplificado de empresas de estacionamentos:
 
 ![c07](https://user-images.githubusercontent.com/90852295/198856492-6d2dc007-23d1-451e-9129-ee33aa4d078e.png)

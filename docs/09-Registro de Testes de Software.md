@@ -42,6 +42,22 @@ Em anexo, as imagens ilustrativas que demonstram passo a passo a utilização da
 
 ![8](https://user-images.githubusercontent.com/90852295/194711848-eaf94b25-1442-456b-b5bf-8ad180e8188c.png)
 
+1.9 O usuário poderá editar as informações pessoais da conta criada:
+
+![edit1](https://user-images.githubusercontent.com/90852295/204061277-bff23231-1a05-4274-abfa-b28410f6cf95.png)
+
+1.10 O usuário deverá informar os dados da conta:
+
+![edit2](https://user-images.githubusercontent.com/90852295/204061317-e12d308c-907b-4ab8-8ee7-9e9d8e9d0ecf.png)
+
+1.11 O usuário deverá informar as alterações desejadas e clicar em editar:
+
+![edit3](https://user-images.githubusercontent.com/90852295/204061346-53b70a1a-956b-400a-a550-9048d0566110.png)
+
+1.12 O usuário recebará notificação de que as atualizações foram realizadas:
+
+![edit4](https://user-images.githubusercontent.com/90852295/204061398-0faf332c-9a25-45b2-a998-549436c153b5.png)
+
 <br>
 
 • Caso de teste CT 02 - O sistema deve apresentar um mecanismo de busca que permita ao cliente localizar estacionamentos cadastrados que possuam vagas para estacionamento imediato de acordo com sua localização.
@@ -79,6 +95,30 @@ Em anexo, as imagens ilustrativas que demonstram passo a passo a utilização da
 ![3](https://user-images.githubusercontent.com/90852295/198856129-ab25d50b-8a72-4b5c-87c8-6675437ad6be.png)
 
 <br>
+
+• Caso de teste CT 05 – O sistema deve permitir que o cliente avalie um estacionamento utilizado por ele:
+
+![CT05](https://user-images.githubusercontent.com/90852295/204060421-191c73d1-78df-44bc-a268-41254654efb6.png)
+
+5.1 Após a utilização do serviço, o cliente poderá enviar feedback, sendo a avaliação representada pelo número de estrelas atribuído ao estacionamento:
+
+![feed1](https://user-images.githubusercontent.com/90852295/204060785-558d1ec5-c20f-4466-ac1a-1ae11f306807.png)
+
+5.2 O usuário deve marcar as estrelas conforme sua avaliação: 
+
+![feed2](https://user-images.githubusercontent.com/90852295/204060989-a7c98495-a588-468c-bcc3-19c079829821.png)
+
+• Caso de teste CT 06 – O sistema deve permitir que o cliente faça comentários sobre um estacionamento utilizado por ele:
+
+![CT06](https://user-images.githubusercontent.com/90852295/204060381-3e752144-202e-47e6-b132-e23df7365ce9.png)
+
+6.1 O cliente pode inserir comentários ao enviar o feedback para o estaciomento utilizado:
+
+![feed3](https://user-images.githubusercontent.com/90852295/204061061-a74f944e-a608-47bf-bc44-64b3fb1337ae.png)
+
+6.2 O cliente pode vizualizar comentários enviados por outros usuários:
+
+![feed4](https://user-images.githubusercontent.com/90852295/204061111-778fbea9-0c70-4b09-9fa8-b66132a4a4a9.png)
 
 • Caso de teste CT 07 - O sistema deve permitir o cadastro simplificado de empresas de estacionamentos:
 

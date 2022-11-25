@@ -21,10 +21,13 @@ import Icon from "react-native-vector-icons/Feather";
 import SideBar from "../../components/sideBar";
 import Stars from "react-native-stars";
 import IconMat from "react-native-vector-icons/MaterialCommunityIcons";
+import { selectUserId } from "../../flux/slices/userId";
 const HomeScreen = (props) => {
   const [info, setInfoMark] = useState({});
   const [dadosFilter, setDataFilter] = useState();
   const [filterText, setTextFilter] = useState("");
+  const [parkId, setIdPark] = useState();
+  const [startRating, setStarsRating] = useState(0);
   const dispatch = useDispatch();
   const [visible, setVisible] = React.useState(false);
   const [feedback, setFeedBack] = React.useState("");
@@ -33,7 +36,12 @@ const HomeScreen = (props) => {
   const {
     detailNavigation: { state },
   } = useSelector(selectDetailNavigation);
+  const {
+    userId: { id },
+  } = useSelector(selectUserId);
+
   const themeSelect = useTheme();
+
   const containerStyle = {
     padding: 10,
     width: 380,
@@ -44,6 +52,7 @@ const HomeScreen = (props) => {
     bottom: 0,
     marginStart: 7,
   };
+
   useEffect(() => {
     handlleRequestBackend();
   });
@@ -63,6 +72,7 @@ const HomeScreen = (props) => {
     },
   });
 
+  //Busca todos os estacionametos da api
   const handlleRequestBackend = async () => {
     try {
       const respo = await api.get("/parkLocations");
@@ -70,15 +80,19 @@ const HomeScreen = (props) => {
     } catch (err) {}
   };
 
+  //Limpa o estado da variável parks
   const setCleanParcks = () => {
     setDataFilter(park.parks);
   };
+
+  //Callback que carrega o estacionamento selecionado
   const pressCallback = (park) => {
     setInfoMark(park);
     setTextFilter("");
     setCleanParcks();
   };
 
+  //Filtra os estacionamentos e lista
   const filterOnChange = (value) => {
     setTextFilter(value);
     const DadosFiltrados = park.parks.filter((item) => {
@@ -89,10 +103,40 @@ const HomeScreen = (props) => {
 
     setDataFilter(DadosFiltrados);
   };
+
+  //Seta o Modal visible ou hide
   const setModalShow = (e) => {
     setVisible(e);
     return e;
   };
+
+  //Recupera o id do estacionamento selecionado
+  const getIdPark = (id) => setIdPark(id);
+
+  //Envia o feedback para o estacionamento selecionado
+  const sendFeedBack = async () => {
+    if (feedback === "") {
+      return;
+    }
+
+    const respo = await api.get(`/userDetail/${id}`);
+    const {
+      data: { nome },
+    } = respo;
+
+    if (!nome) return;
+    console.log(nome);
+    api
+      .post(`/ratePark/${parkId}`, {
+        name: nome,
+        rating: startRating,
+        comment: feedback,
+      })
+      .then((e) => {
+        setVisible(false);
+      });
+  };
+
   return (
     <ScrollView style={{ flex: 1 }}>
       <View
@@ -136,6 +180,7 @@ const HomeScreen = (props) => {
         <DetailParkOnSelected
           hide={state}
           info={info}
+          setIdPark={getIdPark}
           setModal={setModalShow}
         />
       </View>
@@ -188,7 +233,10 @@ const HomeScreen = (props) => {
           >
             <View style={{ marginTop: 20 }}>
               <Stars
-                default={2.5}
+                update={(val) => {
+                  setStarsRating(val);
+                }}
+                default={startRating}
                 count={5}
                 half={true}
                 starSize={50}
@@ -206,8 +254,21 @@ const HomeScreen = (props) => {
                 }
               />
             </View>
-            <Button mode="contained" style={{ width: "50%", marginTop: 50 }}>
-              Enviar
+            <Button
+              onPress={sendFeedBack}
+              mode="contained"
+              style={{
+                width: "50%",
+                marginTop: 50,
+              }}
+            >
+              <Text
+                style={{
+                  color: "#FFF",
+                }}
+              >
+                Enviar
+              </Text>
             </Button>
           </View>
         </ScrollView>

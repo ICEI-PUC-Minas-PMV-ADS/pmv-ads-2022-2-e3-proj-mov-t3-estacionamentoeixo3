@@ -117,7 +117,7 @@ const DetailParkOnSelected = ({ hide, info, setModal, setIdPark }) => {
                       )}
                       key={item.id}
                       titleStyle={{ color: themeSelected.colors.text }}
-                      title={`${item.name ? item.name : "Anónimo"}: ${
+                      title={`${item.name ? item.name : "Anônimo"}: ${
                         item.comment ? item.comment : ""
                       }
                  `}

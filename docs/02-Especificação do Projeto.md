@@ -95,7 +95,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-01| O sistema deve permitir que o cliente crie uma conta para realizar um cadastro simples, com exigência de nome e email, que permitirá a utilização das funcionalidades do sistema. | ALTA | 
 |RF-02| O sistema deve apresentar um mecanismo de busca que permita ao cliente localizar estacionamentos cadastrados que possuam vagas para estacionamento imediato de acordo com sua localização. | ALTA |
-|RF-03| O sistema deve permitir ao cliente informar o valor que deseja pagar pelo tempo de estacionamento. | MÉDIA |
+|RF-03| O sistema deve permitir ao cliente visualizar o valor que cobrado pelo estacionamento buscado ou selecionado. | MÉDIA |
 |RF-04| O sistema deve permitir, a partir da localização geográfica, que o cliente seja redirecionado ao aplicativo de navegação do dispositivo móvel. | ALTA |
 |RF-05| O sistema deve permitir que o cliente avalie um estacionamento utilizado por ele. | ALTA |
 |RF-06| O sistema deve permitir que o cliente faça comentários sobre um estacionamento utilizado por ele. | ALTA |
@@ -110,7 +110,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-03| O sistema deve ser publicado no play store. |  ALTA |
 |RNF-04| O sistema deve utilizar a API do google maps ou aplicativo disponível no smartphone do usuário para mapear a rota até o estacionamento|  ALTA | 
 |RNF-05| O sistema deverá usar banco de dados relacional |  ALTA |
-|RNF-06| o sistema deverá utilizar o Firebase para o cadastro e autenticação do cliente |  ALTA |
+|RNF-06| O sistema deverá utilizar o Firebase para o cadastro e autenticação do cliente |  ALTA |
 
 ## Restrições
 

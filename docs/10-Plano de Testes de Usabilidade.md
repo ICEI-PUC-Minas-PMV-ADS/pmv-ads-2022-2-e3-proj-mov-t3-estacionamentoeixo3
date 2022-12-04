@@ -52,7 +52,7 @@ Tarefas a serem executadas pelos participantes, de acordo com os casos de uso el
 
 ![CT02](https://user-images.githubusercontent.com/88891675/198891824-904c64b2-5f3e-47ee-a143-f7af533e504d.jpg)
 
-![CT03](https://user-images.githubusercontent.com/88891675/198892185-d5410530-6eda-4678-9904-9fd808dc6b45.jpg)
+![CT03](https://user-images.githubusercontent.com/90852295/205509618-484bb496-4e3e-4d4d-93f7-7aeb40cd7a39.png)
 
 ![CT04](https://user-images.githubusercontent.com/88891675/198892178-bf67143b-a7f6-48d3-943b-21517c2aff6e.jpg)
 

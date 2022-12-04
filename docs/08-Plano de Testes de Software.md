@@ -17,7 +17,7 @@ Os testes funcionais a serem realizados no aplicativo estão descritos a seguir:
 
 ![CT02](https://user-images.githubusercontent.com/88891675/198892984-87b77bd0-30e4-436a-824d-5aea5de11a24.jpg)
 
-![CT03](https://user-images.githubusercontent.com/90852295/205509582-b5b641ce-095b-4d64-941a-3e214ae357a3.png)
+![CT03](https://user-images.githubusercontent.com/90852295/205509891-ff32a344-8822-4e10-8985-72b97faecbe4.png)
 
 ![CT04](https://user-images.githubusercontent.com/88891675/198892988-b4cd7f92-e39d-4ba8-8d21-f7206fb1e0ac.jpg)
 

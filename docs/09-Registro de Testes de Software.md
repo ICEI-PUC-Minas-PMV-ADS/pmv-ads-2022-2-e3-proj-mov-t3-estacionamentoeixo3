@@ -78,6 +78,16 @@ Em anexo, as imagens ilustrativas que demonstram passo a passo a utilização da
 
 <br>
 
+• Caso de teste CT 03 - O sistema deve permitir ao cliente visualizar o valor que cobrado pelo estacionamento buscado ou selecionado:
+
+![CT03](https://user-images.githubusercontent.com/90852295/205511543-8ab39bbf-5c66-467f-a3be-f56b0d8ab25c.png)
+
+3.1 O usuário visualiza o valor cobrado pelo estacionamento:
+
+![tela](https://user-images.githubusercontent.com/90852295/205511502-dffdf316-7096-4fae-b0b9-5adb77e1a7ff.jpeg)
+
+<br>
+
 • Caso de teste CT 04 -O sistema deve permitir, a partir da localização geográfica, que o cliente seja redirecionado ao aplicativo de navegação do dispositivo móvel:
 
 ![CT04](https://user-images.githubusercontent.com/88891675/198892913-6e086ee4-ae56-4c7a-bbae-15bd2a0abdc4.jpg)

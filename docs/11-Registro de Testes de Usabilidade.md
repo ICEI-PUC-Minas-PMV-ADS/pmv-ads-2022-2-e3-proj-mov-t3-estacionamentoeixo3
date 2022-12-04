@@ -34,6 +34,12 @@ CTU-02 – O sistema deve apresentar um mecanismo de busca que permita ao client
 
 ![1](https://user-images.githubusercontent.com/90852295/198856377-aa9c2513-cdb6-4357-a747-725181f8ed33.png)
 
+CT-03 – O sistema deve permitir ao cliente visualizar o valor que cobrado pelo estacionamento buscado ou selecionado:
+
+![CT03](https://user-images.githubusercontent.com/90852295/205510098-ef2880f1-8f8f-4b40-bb44-055e4a66352e.png)
+
+![RCT03](https://user-images.githubusercontent.com/90852295/205510101-7cfb352d-0745-4b2e-bfc0-782fc46f2b52.png)
+
 CT-04 – O sistema deve permitir, a partir da localização geográfica, que o cliente seja redirecionado ao aplicativo de navegação do dispositivo móvel:
 
 ![c04](https://user-images.githubusercontent.com/90852295/198856468-03cad186-61e8-4ff3-a116-a500bc1a7b52.png)
